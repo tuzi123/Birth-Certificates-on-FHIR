@@ -1,0 +1,3388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
+
+<link rel="stylesheet" type="text/css" href="Uintah_style.css"/>
+
+<title>Uintah Data Entry</title>
+
+
+
+</head>
+
+
+
+<body style="text-align: left">
+
+<form method="post" id="frmDataEntry" action="">
+
+	
+
+<div>	
+
+			Newborn Facility/Attendant Mother Address Father Mother Confidential 
+			Mother Confidential 2 Mother Medical Mother Race Mother Education 
+			Father Race Father Education Complications of Labor Infertility/Risk 
+			factors Risk Factors 2 Delivery Infections/Antepartum Newborn 
+			Medical Abnormal Conditions of NB Congenital Anomalies Congenital 
+			Anomalies 2 
+			
+
+			
+
+</div>			
+
+							
+
+<div class="certsection" id="newborn_information">
+
+			<div class="hdr">NEWBORN INFORMATION</div>			
+
+					
+
+			<label>State File Number</label> 
+
+			
+
+			<input type="text" name="txtStateFileNumber"  size="15"  maxlength="12"/><br/>
+
+					
+
+			<label>Newborn Medical Record Number:</label>
+
+		
+
+			<input type="text" name="txtChildMRN"   size="25"  maxlength="25"/><br/>
+
+			
+
+		
+
+			<label>Alternate Medical Record Number:</label>
+
+	
+
+			<input type="text" name="txtChildAlternateMRN"  size="25"  maxlength="25"/><br/>
+
+					
+
+			<label>Child First Name:</label>
+
+	
+
+			<input type="text" name="txtChildFirst"  size="50"/><br/>
+
+			
+
+			
+
+				<label>Child Middle Name</label> 
+
+		
+
+			<input type="text" name="txtChildMiddle"   size="50"  maxlength="30"/><br/>			
+
+		
+
+			<label>Child Last Name</label>
+
+			
+
+			<input type="text" name="txtChildLast" size="50"  maxlength="25"/><br/>			
+
+			
+
+			<label>Child Suffix:</label>
+
+			
+
+			<input type="text" name="txtChildSuffix" value="" /> <br/>
+
+								
+
+			<label>Child Sex:</label>
+
+			
+
+			<input type="checkbox" name="chkGenderM" value="X" /> Male
+
+			<input type="checkbox" name="chkGenderF" value="X" /> Female
+
+			<input type="checkbox" name="chkGenderN" value="X"  /> Not Yet 
+			Determined
+
+			<br/>
+
+			<label>Date of Birth</label>			
+
+			
+
+			<input type="text" name="txtBirthMM" value="" size="2"  maxlength="2" style="width: 30"/> 
+
+			<input type="text" name="txtBirthDD" value="" size="2"  maxlength="2" style="width: 30"/> 
+
+			<input type="text" name="txtBirthCCYY" value="" size="4"  style="width: 45" maxlength="4"/>
+
+		<br/>
+
+			
+
+			<label>*Time of Birth</label>
+
+		
+
+			<input type="text" name="txtTimeOfBirthHH"  value="" size="2"  maxlength="2" style="width: 30"/> 
+
+			<input type="text" name="txtTimeOfBirthMM"  value="" size="2"  maxlength="2" style="width: 30"/>
+
+				
+
+</div>	
+
+		
+
+<div class="certsection" id="facility_and_attendant">
+
+		
+
+			<div class="hdr">FACILITY and ATTENDANT</div>
+
+									
+
+				<input type="button" name="cmdPrevious1" style="font-size: 8pt; height:0; width:0; "/><br/>		
+
+		
+
+			<label>Place Where Birth Occurred:</label>
+
+		
+
+			<input type="checkbox" name="chkBirthFacilityType1" value="X"   /> 
+
+			Hospital &nbsp;
+
+			<input type="checkbox" name="chkBirthFacilityType2" value="X"   /> 
+
+			Freestanding Birth Center &nbsp;
+
+			<input type="checkbox" name="chkBirthFacilityType3" value="X"   /> 
+			Home (Intended) &nbsp;
+
+			<input type="checkbox" name="chkBirthFacilityType4" value="X"   /> 
+			Home (Not Intended)&nbsp;
+
+			
+
+			<input type="checkbox" name="chkBirthFacilityType5" value="X"   /> 
+			Home (Unknown if Intended)&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkBirthFacilityType6" value="X"   /> 
+
+			Clinic/Doctor's Office &nbsp;
+
+			<input type="checkbox" name="chkBirthFacilityType7" value="X"   /> 
+
+			Other &nbsp;
+
+			<input type="checkbox" name="chkBirthFacilityType9" value="X"   /> 
+
+			Unknown<br/>
+
+		
+
+			<label>Facility Name:</label>
+
+			
+
+			<input type="text" name="txtHospitalName"  value="" size="60" maxlength="60"/>
+
+			<input type="checkbox" name="chkBornEnroute" value="X"   /> Born 
+			Enroute<br/>
+
+			
+
+		
+
+			<label>Facility NPI:</label>
+
+			
+
+			<input type="text" name="txtFacilityNPI"  value="" size="20"  maxlength="20"/>&nbsp; 
+			Facility Code
+
+			<input type="text" name="txtFacilityCode" value="" size="3"  maxlength="3"/>
+
+			Midwife Code
+
+			<input type="text" name="txtMidwifeCode" value="" size="3"  maxlength="3"/>
+
+	
+
+		    <br/>
+
+			<label>Facility Address:</label>
+
+			
+
+			<input type="text" name="txtNonFacilityLocation1"  value="" size="50"  maxlength="50"/>
+
+			<br/>
+
+		
+
+			<label>Non-Facility Address 2:</label>
+
+		
+
+			<input type="text" name="txtNonFacilityLocation2"  value="" size="50"  maxlength="50"/>
+
+		    <br/>
+
+			<label>City of Birth:</label>
+
+			
+
+			<input type="text" name="txtCityOfBirth"  value=""  size="35"  maxlength="35"/>
+
+			<input type="text" name="txtCityOfBirthFips"  value="" size="3"  style="width:50; height:22" maxlength="5"/>&nbsp; 
+			County of Birth
+
+			<input type="text" name="txtCountyOfBirth"  value="" maxlength="10"/>
+
+			<input type="text" name="txtCountyOfBirthFips" value="" size="2"  style="width:35; height:22" maxlength="3"/>&nbsp;
+
+	        <br/>
+
+	
+
+			<label>Certifier Name:</label>
+
+			
+
+			<input type="text" name="txtCertifierName"  value=""  maxlength="50" /> 
+
+		    <br/>
+
+			<label>Attendant Name:</label>
+
+			
+
+			<input type="text" name="txtAttendantName"  value="" size="50" maxlength="50"/>
+
+			<br/>
+
+			<label>Title:</label>
+
+			
+
+			<input type="text" name="txtAttendantTitle"  value="" size="30" maxlength="30"/> 
+
+			<br/>
+
+			<label>Attendant Title Other: </label>
+
+			<input type="text" name="txtAttendantTitleOtherSpec"  value="" size="20"  maxlength="30"/><i>Specify&nbsp;
+
+	        </i>
+
+			<br/>
+
+		
+
+			<label>Attendant NPI:</label>
+
+			
+
+			<input type="text" name="txtAttendantNPI"  value="" size="20"  maxlength="20"/>
+
+		    <br/>
+
+		    <label>Attendant Address:</label>
+
+			
+
+			<input type="text" name="txtAttendantStreetAddress"  value="" size="50"  maxlength="50"/>
+
+		
+
+			Attendant City:
+
+			
+
+			<input type="text" name="txtAttendantCity"  value="" size="25" maxlength="35"/>
+
+
+
+		
+
+			Attendant State:
+
+			
+
+			<input type="text" name="txtAttendantState"  value="" size="25" maxlength="25"/>
+
+		
+
+			Attendant Zip
+
+			<input type="text" name="txtAttendantZip5"  value="" size="5"  maxlength="5"/> 
+
+			<input type="text" name="txtAttendantZip4"  value="" size="4"  maxlength="4"/>
+
+					
+
+</div>
+
+<div class="certsection" id="mother_information">
+
+			
+
+			<div class="hdr">MOTHER INFORMATION</div>
+
+				
+
+		
+
+			<label>Mom Marital Status at Time of this Birth:</label>
+
+			
+
+		
+
+			<input type="checkbox" name="chkMomMaritalStatusM" value="X"   /> 
+
+			Married to Father of Newborn&nbsp;&nbsp; 
+
+			<input type="checkbox" name="chkMomMaritalStatusN" value="X"   /> 
+
+			Not Married&nbsp; 
+
+	
+
+			<input type="checkbox" name="chkMomMaritalStatusO" value="X"  /> 
+
+			Married, but not to Father of Newborn
+
+			
+
+			
+
+			<label>Was Mom Ever Married:</label>
+
+		
+
+			<input type="checkbox" name="chkMomMarriedEverY" value="X"   /> Yes&nbsp;
+
+			<input type="checkbox" name="chkMomMarriedEverN" value="X"   /> No&nbsp;
+
+			<input type="checkbox" name="chkMomMarriedEverU" value="X"   /> 
+			Unknown
+
+			<br/>
+
+		
+
+			<label>Was Mom Married at Conception, at Birth, or Any Time in 
+			Between</label>
+
+			<input type="checkbox" name="chkMomMarriedBirthY" value="X"   /> Yes 
+			&nbsp;
+
+			<input type="checkbox" name="chkMomMarriedBirthN" value="X"   /> No 
+			&nbsp;
+
+			<input type="checkbox" name="chkMomMarriedBirthU" value="X"  /> 
+			Unknown
+
+			
+
+			<br/>
+
+		
+
+			
+
+			<label>(Mother Current Legal Name)</label>
+
+			
+
+			<label>&nbsp;First Name:</label>
+
+			
+
+			<input type="text" name="txtMomFirst"  value="" size="50"  maxlength="20"/><br/>
+
+			
+
+			<label>Middle Name:</label>
+
+		
+
+			<input type="text" name="txtMomMiddle"  value="" size="50"  maxlength="30"/><br/>
+
+
+
+			
+
+			
+
+			<label>Last Name</label>
+
+			
+
+			<input type="text" name="txtMomLast"  value="" size="50"  maxlength="25"/>&nbsp; 
+			Suffix
+
+			<input type="text" name="txtMomSuffix"  value="" size="5" />
+
+			
+
+			
+
+			(Mother Name Prior to First Marriage - Maiden Name: Type &quot;Same&quot; if 
+			Mom Maiden Name and Current Name are the Same)
+
+		
+
+		
+
+						<label>First Name:</label> 
+
+			
+
+			<input type="text" name="txtMomFirstPrior"  value="" size="50"  maxlength="20"/> 
+
+		
+
+		
+
+						<label>Middle Name</label>
+
+			
+
+			<input type="text" name="txtMomMiddlePrior"  value="" size="50"  maxlength="30"/> 
+
+		
+
+		
+
+						<label>*Last Name</label> 
+
+			
+
+			<input type="text" name="txtMomLastPrior"  value="" size="50"  maxlength="25"/>&nbsp; 
+			Suffix 
+
+			<input type="text" name="txtMomSuffixPrior"  value="" size="5"maxlength="4"/>
+
+			
+
+		
+
+		
+
+						<label>*Mother Date of Birth</label>
+
+			
+
+			<input type="text" name="txtMomBirthMM"  value="" size="2"  maxlength="2" style="width: 30"/> 
+
+			<input type="text" name="txtMomBirthDD"  value="" size="2"  maxlength="2" style="width: 30"/> 
+
+			<input type="text" name="txtMomBirthCCYY"  value="" size="4"  maxlength="4" style="width: 45"/>
+
+			mm/dd/ccyy
+
+			<input type="text" name="txtMomAge" value=""  size="3"  style="width: 40" maxlength="2"/>
+
+		
+
+		
+
+						<label>Phone Number</label>
+
+			
+
+			<input type="text" name="txtMomPhoneAreaCode"  value="" size="3"  maxlength="3"/>
+
+			<input type="text" name="txtMomPhoneNumber"  value="" size="8"  maxlength="8"/>&nbsp;&nbsp;&nbsp;&nbsp; 
+			Mother Social Security Number
+
+			<input type="text" name="txtMomSSN"  value="" size="11"  maxlength="11"/>
+
+			
+
+		
+
+						<label>*Mother Place of Birth (State)</label>
+
+			
+
+			<input type="text" name="txtMomStateOfBirth"  value="" size="35" maxlength="25"/>&nbsp;
+
+			<input type="text" name="txtMomStateOfBirthFips"  value="" size="2"  style="width:40" maxlength="2"/> 
+
+		
+
+		
+
+		
+
+						<label>*Country</label>
+
+			
+
+			<input type="text" name="txtMomCountryOfBirth"  value="" size="35"maxlength="35"/>&nbsp;
+
+			<input type="text" name="txtMomCountryOfBirthFips"  value="" size="2"  style="width:40" maxlength="2"/> 
+
+	
+
+		
+
+	
+
+		
+
+		
+
+			<label>MOTHER ADDRESS</label>
+
+			
+
+			(Mother's Usual/Current Residence - Type &quot;Home&quot; to copy place of 
+			birth fields.)<br/>
+
+							
+
+						<label>*Street Address</label> 
+
+			
+
+			<input type="text" name="txtMomResStreetAddress1"  value="" size="50"  maxlength="50"/>
+
+			
+
+						<label>Street Address 2</label>
+
+		
+
+			<input type="text" name="txtMomResStreetAddress2"  value="" size="50"  maxlength="50"/>
+
+		
+
+		
+
+						<label>*State</label> 
+
+			
+
+			<input type="text" name="txtMomResState"  value="" size="25"/>
+
+			<input type="text" name="txtMomResStateFips"  value="" size="2"  style="width:40" maxlength="2"/> 
+			*City
+
+			<input type="text" name="txtMomResCity"  value="" size="25" maxlength="35"/> 
+
+			<input type="text" name="txtMomResCityFips"  value="" size="3"  style="width:50" maxlength="5"/>
+
+		
+
+		
+
+						<label>*County</label> 
+
+	
+
+			<input type="text" name="txtMomResCounty"  value="" size="25" maxlength="15"/>
+
+			<input type="text" name="txtMomResCountyFips"  value="" size="2"  style="width:35" maxlength="3"/>&nbsp; 
+			*Country
+
+			<input type="text" name="txtMomResCountry"  value="" size="25" maxlength="35" />
+
+			
+
+			
+
+			<input type="text" name="txtMomResCountryFips"  value="" size="2"  style="width:40" maxlength="2"/>
+
+		
+
+		
+
+						<label>*Zip</label>
+
+			
+
+			<input type="text" name="txtMomResZip5"  value=""  size="5"  maxlength="5"/> 
+
+			<input type="text" name="txtMomResZip4"  value=""  size="4"  maxlength="4"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			Inside City Limits
+
+			<input type="checkbox" name="chkMomResInCityLimitsY" value="X"  /> 
+
+			Yes &nbsp;
+
+			<input type="checkbox" name="chkMomResInCityLimitsN" value="X"   /> 
+
+			No&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkMomResInCityLimitsU" value="X"   /> 
+			Unknown
+
+		
+
+		
+
+						<label>Parents' Email Address</label>
+
+			
+
+			<input type="text" name="txtParentEmailAddress"  value="" size="60"  maxlength="60"/>
+
+							
+
+			<label>(Mailing Address)</label>
+
+					
+
+			<input type="checkbox" name="chkMomMailSameAsRes" value="X"   />&nbsp;&nbsp; 
+			&nbsp;Mailing Address Same
+
+		
+
+		
+
+						<label>Name (If in Care of Someone Else)</label>
+
+		
+
+			<input type="text" name="txtMomMailInCareOfName"  value=""  size="50"  maxlength="30"/>
+
+							
+
+						<label>*Street Address</label>
+
+			
+
+			<input type="text" name="txtMomMailStreetAddress1"  value=""  size="50"  maxlength="50"/>
+
+		
+
+		
+
+						<label>Street Address 2</label>
+
+			
+
+			<input type="text" name="txtMomMailStreetAddress2"  value="" size="50"  maxlength="50"/>
+
+		
+
+		
+
+						<label>*State</label>
+
+			
+
+			<input type="text" name="txtMomMailState"  value="" size="25" maxlength="25"/>
+
+			<input type="text" name="txtMomMailStatePostalCode" size="2"  style="width: 40; " value="" maxlength="2"/>&nbsp; 
+			*City
+
+			<input type="text" name="txtMomMailCity"  value="" size="15" maxlength="35"/>
+
+		
+
+		
+
+						<label>*Country</label>
+
+			
+
+			<input type="text" name="txtMomMailCountry"  value="" size="25" maxlength="35"/>&nbsp;
+
+		
+
+		
+
+						<label>*Zip</label>
+
+		
+
+			<input type="text" name="txtMomMailZip5"  value=""  size="5"  maxlength="5"/> 
+
+			<input type="text" name="txtMomMailZip4" value=""  size="4"  maxlength="4"/>&nbsp;
+
+</div>
+
+	
+
+<div class="certsection" id="father_info">
+
+
+
+			<div class="hdr">FATHER NAME AND ADDRESS </div>
+
+	
+
+			<label>No Father Information</label>
+
+	
+
+			
+
+			<label>Father First Name</label>
+
+			
+
+			<input type="text" name="txtDadFirst"  value=""  size="50"  maxlength="20"/>
+
+			<br/>
+
+	
+
+			
+
+			<label>Father Middle Name</label>
+
+			
+
+			<input type="text" name="txtDadMiddle"  value=""  size="50"  maxlength="30"/>
+
+			
+
+		     <br/>
+
+	
+
+			<label>Father Last Name</label>
+
+			
+
+			<input type="text" name="txtDadLast"  value=""  size="50"  maxlength="25"/>&nbsp;&nbsp; 
+			Suffix
+
+			<input type="text" name="txtDadSuffix"  value="" size="4"  maxlength="4" style="width:45; height:22"/>
+
+			<input type="button" value="?" name="cmdHelpDadSuffix" style="background-color: #FFFDD7; height:20; width:19" tabindex="1000"/>
+
+			
+
+			<label>*Father Date of Birth</label>
+
+	
+
+			<input type="text" name="txtDadBirthMM"  value="" size="2"  maxlength="2" style="width: 30; height:22"/> 
+
+			<input type="text" name="txtDadBirthDD"  value="" size="2"  maxlength="2" style="width: 30"/> 
+
+			<input type="text" name="txtDadBirthCCYY"  value="" size="4"  maxlength="4" style="width: 45"/>
+
+			
+
+			<input type="text" name="txtDadAge" value=""  size="3"  style="width: 40" maxlength="2"/>
+
+			<label>Father Social Security Number</label>
+
+			<input type="text" name="txtDadSSN"  value="" size="11"  maxlength="11"/>
+
+			<input type="button" value="?" name="cmdHelpDadSSN" style="background-color: #FFFDD7; height:20; width:19" tabindex="1000"/>
+
+							
+
+			<label>*Father Place of Birth (State)</label>
+
+			
+
+			<input type="text" name="txtDadStateOfBirth"  value=""  size="25" maxlength="25"/>&nbsp;
+
+			<input type="text" name="txtDadStateOfBirthFips" value="" size="2"  style="width:40" maxlength="2"/> 
+
+			
+
+			<label>*Country</label>
+
+			<input type="text" name="txtDadCountryOfBirth"  value="" size="25" maxlength="35"/>&nbsp;
+
+			<input type="text" name="txtDadCountryOfBirthFips"  value="" size="2"  style="width:40" maxlength="2"/> 
+
+			<br/>
+
+			<label>(Father's Usual/Current Residence)</label>				
+
+			<br/>
+
+			<label>Same Resident Address as Mother</label>
+
+		     <br/>
+
+		
+
+			<label>*Address </label> 
+
+			<input type="text" name="txtDadResStreetAddress1"  value="" size="50"  maxlength="50"/>
+
+			<br/>
+
+			<label>Address 2</label>
+
+			<input type="text" name="txtDadResStreetAddress2"  value=""  size="50"  maxlength="50"/>
+
+			<br/>
+
+			<label>*State</label>
+
+			<input type="text" name="txtDadResState"  value="" size="25" maxlength="25"/>
+
+			<input type="text" name="txtDadResStateFips"  value="" size="2"  style="width:40" maxlength="2"/>&nbsp; 
+
+			<br/>
+
+			<label>*City</label>
+
+			<input type="text" name="txtDadResCity"  value="" size="20"maxlength="35"/>
+
+			<input type="text" name="txtDadResCityFips"  value="" size="3"  style="width:50" maxlength="5/"/>
+
+		
+
+			<br/>
+
+			<label>*County</label>
+
+			<input type="text" name="txtDadResCounty"  value="" size="25" maxlength="15"/> 
+
+			<input type="text" name="txtDadResCountyFips"  value="" size="2"  style="width:35" maxlength="3"/> 
+
+			<br/>
+
+			<label>*Country</label>
+
+			<input type="text" name="txtDadResCountry"  value="" size="20"  style="background-color: #EDF8EB" maxlength="35"/>
+
+			<input type="text" name="txtDadResCountryFips"  value="" size="2"  style="width:40" maxlength="2"/>
+
+			<br/>
+
+			<label>*Zip</label> 
+
+			<input type="text" name="txtDadResZip5"  value=""  size="5"  maxlength="5"/> 
+
+			<input type="text" name="txtDadResZip4"  value=""  size="4"  maxlength="4"/>&nbsp;
+
+		    <br/>
+
+		
+
+			<label>Inside City Limits</label>
+
+			<input type="checkbox" name="chkDadResInCityLimitsY" value="X"   /> 
+
+			Yes&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkDadResInCityLimitsN" value="X"   /> 
+
+			No&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkDadResInCityLimitsU" value="X"   /> 
+			Unknown		
+
+					
+
+	
+
+</div>
+
+		
+
+<div class="certsection" id="mother_confidential">	
+
+			<div class="hdr"><b>MOTHER CONFIDENTIAL</b></div>
+
+					
+
+				Please Check Applicable Boxes (A check in the box = Yes)<br/>
+
+			
+
+			<input type="checkbox" name="chkPlacedForAdoption" value="X"   style="border: 1px solid #FFFFFF; float:left"/>&nbsp; 
+
+		<br/>	
+
+	     <label>	Child Relinquished for Adoption Before Leaving Hospital</label>
+
+         <br/><label>Name of Adoption Agency or Attorney</label>
+
+			<input type="text" name="txtAdoptionAgency"  value=""  size="40"  maxlength="60"/>&nbsp;&nbsp;&nbsp;
+
+		  <br/>
+
+		
+
+			<input type="checkbox" name="chkRequestedSSN" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+			<br/>
+
+			<label>Parental Permission to Request SSN from SSA</label>				
+
+			<input type="checkbox" name="chkMomMedicaid" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+			<br/>
+
+			<label>Mother Enrolled in Medicaid at Time of Birth</label>
+
+			<br/>			
+
+			<label>*Mother Medicaid Number</label>
+
+			<input type="text" name="txtMomMedicaidNumber" value=""  size="20"  maxlength="10"/>&nbsp;
+
+		    <br/>	
+
+			<label>Did Mother Receive WIC Food for Herself During Pregnancy</label>
+
+			<input type="checkbox" name="chkMomWICY" value="X"   /> Yes&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkMomWICN" value="X"   /> No&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkMomWICU" value="X"  /> Unknown
+
+			<input type="button" value="?" name="cmdHelpMomWIC" style="background-color: #FFFDD7; height:20; width:19" tabindex="1000"/>
+
+				
+
+			<br/>		
+
+			<label>Primary Source of Payment for This Delivery</label>
+
+			<input type="checkbox" name="chkSourceOfPayment1" value="X"   /> 
+			Medicaid&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkSourceOfPayment2" value="X"   /> 
+			Private Insurance&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkSourceOfPayment3" value="X"   /> 
+			Self-Pay&nbsp;&nbsp;
+
+			<br/><input type="checkbox" name="chkSourceOfPayment4" value="X"   /> 
+			Indian Health Service&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkSourceOfPayment5" value="X"   /> 
+			CHAMPUS/TRICARE				
+
+			<input type="checkbox" name="chkSourceOfPayment6" value="X"   /> 
+			Other Government (Fed, State, Local)&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkSourceOfPaymentC" value="X"   /> 
+			CHIP&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkSourceOfPayment8" value="X"   /> 
+			Other &nbsp;
+
+			<input type="checkbox" name="chkSourceOfPayment9" value="X"   /> 
+			Unknown
+
+			<br/>	
+
+			
+
+			<label>Has a Relative of the Baby had a Hearing Loss that Existed 
+			Since Childhood&nbsp;</label>
+
+			<input type="checkbox" name="chkHereditaryHearingLossY" value="X"   /> 
+
+			Yes&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkHereditaryHearingLossN" value="X"   /> 
+
+			No &nbsp;
+
+			<input type="checkbox" name="chkHereditaryHearingLossU" value="X"   /> 
+
+			Unknown											
+
+	
+
+</div>	
+
+<div class="certsection" id="mother_confidential2">		
+
+			
+
+			<div class="hdr"><b>MOTHER CONFIDENTIAL 2</b></div>
+
+				<br/>					
+
+				<label>*Mother Height&nbsp;</label>
+
+							
+
+				<input type="text" name="txtMomHeightFeet"  value="" size="3"  maxlength="1"/> 
+			ft
+
+				<input type="text" name="txtMomHeightInches"  value="" size="3"  maxlength="2"/> 
+			in 
+
+				<br/>	
+
+				<label>*Mother Weight Prior to Pregnancy</label>
+
+			
+
+					
+
+				<input type="text" name="txtMomWeightPrior"  value="" size="5"  maxlength="3"/> 
+
+				lbs
+
+			<br/>
+
+				<label>*Mother Weight at Delivery&nbsp; </label>
+
+			
+
+				<input type="text" name="txtMomWeightAtDelivery"  value="" size="5"  maxlength="3"/> 
+				lbs 
+
+	
+
+				<br/>	
+
+				<label>*Mother Weight Gain/Loss</label>
+
+			
+				<br/>	
+
+				<label>Cigarette Smoking Before and During Pregnancy</label>
+
+				<br/>	
+
+				<label>Did Mother Smoke&nbsp;</label> 
+
+			
+
+				<input type="checkbox" name="chkTobaccoUsedY" value="X"  /> 
+
+				Yes&nbsp;&nbsp;
+
+				<input type="checkbox" name="chkTobaccoUsedN" value="X"   /> 
+
+				No&nbsp;&nbsp;
+
+				<input type="checkbox" name="chkTobaccoUsedU" value="X"   /> 
+
+				Unknown
+
+				<br/>
+
+				<label>Number of Cigarettes per Day </label>
+
+				<br/>	
+
+				<label>*Three Months Before Pregnancy&nbsp; </label>	
+
+					
+
+				<input type="text" name="txtTobaccoPrior"  value="" size="5"  maxlength="3"/>							
+
+				<br/>	
+
+				<label>*First Three Months of Pregnancy&nbsp; </label>			
+
+					
+
+				<input type="text" name="txtTobaccoTrimester1"  value="" size="5"  maxlength="3"/>					
+
+				<br/>	
+
+				<label>*Second Three Months of Pregnancy&nbsp;</label> 		
+
+					
+
+				<input type="text" name="txtTobaccoTrimester2"  value="" size="5"  maxlength="3"/>
+
+				<br/>	
+
+				<label>*Last Three Months of Pregnancy&nbsp; </label>
+
+				<input type="text" name="txtTobaccoTrimester3"  value="" size="5"  maxlength="3"/>
+
+		
+
+				<br/>
+
+				<label>Is Infant Being Breastfed at Discharge&nbsp; </label>					
+
+				<input type="checkbox" name="chkBreastfed" value="X"   />
+
+				
+
+				<label>Check if Yes </label>
+
+			
+
+				<br/>
+
+				<label>Informant Signature&nbsp;</label> 			
+
+					
+
+				<input type="checkbox" name="chkInformantSignatureM" value="X"   /> 
+			Mother&nbsp;&nbsp;
+
+				<input type="checkbox" name="chkInformantSignatureF" value="X"   /> 
+			Father&nbsp;&nbsp;
+
+				<input type="checkbox" name="chkInformantSignatureO" value="X"   /> 
+			Other
+
+</div>			
+
+<div class="certsection" id="mother_medical">		
+
+		<div class="hdr">MOTHER MEDICAL</div>
+
+								
+
+				<label>Mother Medical Record Number&nbsp;</label> 
+
+							
+
+				<input type="text" name="txtMomMRN"  value="" size="18"  maxlength="25"/> 
+		Alternate Medical 
+
+				<br/>
+
+				<label>Record Number&nbsp; </label>
+
+				<input type="text" name="txtMomAlternateMRN"  value="" size="18"  maxlength="25"/> 
+
+		
+
+				<br/>
+
+				<label>*Date of Last Menses&nbsp;</label> 					
+
+				<input type="text" name="txtLastMensesMM"  value="" size="2"  style="width: 30" maxlength="2"/> 
+
+				<input type="text" name="txtLastMensesDD"  value="" size="2"  style="width: 30" maxlength="2"/> 
+
+				<input type="text" name="txtLastMensesCCYY"  value="" size="4"  style="width: 45" maxlength="4"/>
+
+						
+
+				<br/>	
+
+				<label>*Other Births - Now Living</label>							
+
+				<input type="text" name="txtPrevPregNowLiving"  value="" size="3"  maxlength="2"/>&nbsp;&nbsp;&nbsp; 
+
+				<br/>
+
+				<label>*Date of Last Live Birth</label>					
+
+				<input type="text" name="txtLastLiveBirthMM"  value="" size="2"  style="width: 30" maxlength="2"/> 
+
+				<input type="text" name="txtLastLiveBirthCCYY"  value="" size="4"  style="width: 45" maxlength="4"/>
+
+				<br/>
+
+				<label>*Other Births - Now Dead&nbsp;</label> 					
+
+				<input type="text" name="txtPrevPregNowDead"  value="" size="3"  maxlength="2"/>
+
+		        <br/>
+
+			    <label>*Number of Terminations&nbsp;</label> 					
+
+				<input type="text" name="txtPrevTerminations"  value="" size="3"  maxlength="2"/>
+
+				<br/>
+
+				<label>*Date of Last Termination</label><input type="text" name="txtLastTerminMM"  value="" size="2"  style="width: 30" maxlength="2"/> 
+
+				<input type="text" name="txtLastTerminCCYY"  value="" size="4"  style="width: 45" maxlength="4"/>
+
+				
+
+				<br/>	
+
+				<label>*Number of Stillborn Pregnancies&nbsp;</label> 	
+
+				<input type="text" name="txtPrevPregStillborn"  value="" size="3"  maxlength="2"/>
+
+				<br/>
+
+				<label>*Number of Previous Multiple Pregnancies</label><input type="text" name="txtPrevPregMultiple"  value="" size="3"  maxlength="2"/> 
+
+			    <br/>
+
+			    <input type="checkbox" name="chkNoPrenatalCare" value="X"   />&nbsp;&nbsp; 
+
+			    
+
+				<label>No Prenatal Care</label>
+
+				<br/><br/>
+
+				<label>*Date of First Prenatal Care Visit&nbsp; </label>
+
+			<input type="text" name="txtDateFirstVisitMM"  value="" size="2"  style="width: 30" maxlength="2"/> 
+
+			<input type="text" name="txtDateFirstVisitDD"  value="" size="2"  style="width: 30" maxlength="2"/> 
+
+			<input type="text" name="txtDateFirstVisitCCYY"  value="" size="4"  style="width: 45" maxlength="4"/>
+
+					
+
+	
+
+			<label>*Date of Last Prenatal Care Visit&nbsp; </label>
+
+		
+
+			<input type="text" name="txtDateLastVisitMM"  value="" size="2"  style="width: 30" maxlength="2"/> 
+
+			<input type="text" name="txtDateLastVisitDD"  value="" size="2"  style="width: 30" maxlength="2"/> 
+
+			<input type="text" name="txtDateLastVisitCCYY"  value="" size="4"  style="width: 45" maxlength="4"/>		
+
+		
+
+		
+
+			<label>*Number of Prenatal Visits&nbsp; </label>
+
+		
+
+			<input type="text" name="txtNumberVisits"  value="" size="5"  maxlength="2"/>
+
+		
+
+		
+
+			
+
+			<label>Transfer of Prenatal Care During Pregnancy&nbsp;</label> 
+
+			
+
+			<input type="checkbox" name="chkTransferCareY" value="X"   /> 
+
+			Yes&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkTransferCareN" value="X"   /> 
+
+			No&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkTransferCareU" value="X"   /> 
+
+			Unknown 
+
+			
+
+	
+
+			<label>*Date of First Visit with Previous Provider&nbsp; </label>
+
+			
+
+			<input type="text" name="txtPreviousVisitMM"  value="" size="2"  style="width: 30" maxlength="2"/> 
+
+			<input type="text" name="txtPreviousVisitDD"  value="" size="2"  style="width: 30" maxlength="2"/> 
+
+			<input type="text" name="txtPreviousVisitCCYY"  value="" size="4"  style="width: 45" maxlength="4"/>
+
+			<label>	*Number of Previous Visits</label>
+
+			<input type="text" name="txtNumberPreviousVisits"  value="" size="5"  maxlength="2"/>
+
+					
+
+			<input type="checkbox" name="chkMomTransferred" value="X"  />&nbsp;&nbsp; 
+
+		    <label>	Mother Transferred from Another Facility</label>
+
+			<input type="button" value="?" name="cmdHelpMomTransferFacility" style="background-color: #FFFDD7; height:20; width:19" tabindex="1000"/>
+
+		
+
+			<label>*Name of Facility Transferred From&nbsp;</label>
+
+	
+
+			<input type="text" name="txtMomTransferredFacility"  value="" size="40"  style="background-color: #ECECFF" maxlength="60"/>&nbsp; 
+		Facility Code
+
+			<input type="text" name="txtMomTransferredFacilityCode"  value="" size="3"  style="width:33" maxlength="3"/> 
+
+		
+
+			
+
+			<label>*State Mother Transferred From&nbsp; </label>
+
+		
+
+			<input type="text" name="txtMomTransferredState"  value="" size="20"  style="background-color: #EDF8EB" maxlength="25"/>
+
+		
+
+		
+
+</div>	
+
+<div class="certsection" id="mother_race">
+
+		
+
+			
+
+		   <div class="hdr">MOTHER RACE</div>
+
+				
+
+
+
+		   Mother of Hispanic Origin IF YES, CHECK ALL THAT APPLY
+
+		
+
+			<input type="button" value="?" name="cmdHelpMomHispanic" style="background-color: #FFFDD7; height:20; width:19" tabindex="1000"/>
+
+		
+
+			
+
+			<input type="checkbox" name="chkMomHispanicOriginY" value="X"   /> 
+
+			Yes&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkMomHispanicOriginN" value="X"   /> 
+
+			No&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkMomHispanicOriginU" value="X"   /> 
+
+			Unknown
+
+			<input type="checkbox" name="chkMomHispanicMex" value="X"   />
+
+			Mexican, Mexican American, Chicana&nbsp;&nbsp; 
+
+			<input type="checkbox" name="chkMomHispanicPuertoRican" value="X"   />
+
+			Puerto Rican &nbsp;
+
+			<input type="checkbox" name="chkMomHispanicCuban" value="X"   />
+
+			Cuban
+
+			
+
+			<input type="checkbox" name="chkMomHispanicOther" value="X"   />
+
+			Other Spanish/Hispanic/Latino *<input type="text" name="txtMomHispanicOtherSpec"  value=""  size="60"  maxlength="60"/> 
+
+
+
+			<span style="font-size: 8pt">Specify</span>
+
+				
+
+	 
+
+	         <b>CHECK ALL THAT APPLY FOR RACE OF THE MOTHER</b>
+
+		
+
+						<input type="checkbox" name="chkMomRaceWhite" value="X"   />
+
+						White
+
+						<input type="checkbox" name="chkMomRaceBlack" value="X"   />
+
+						Black or African American
+
+						<input type="checkbox" name="chkMomRaceChinese" value="X"   />
+
+						Chinese
+
+						<input type="checkbox" name="chkMomRaceJapanese" value="X"   />
+
+						Japanese
+
+		
+
+						<input type="checkbox" name="chkMomRaceHawaiian" value="X"   />
+
+						Native Hawaiian
+
+						<input type="checkbox" name="chkMomRaceFilipino" value="X"   />
+
+						Filipino
+
+						<input type="checkbox" name="chkMomRaceAsianIndian" value="X"   />
+
+						Asian Indian
+
+						<input type="checkbox" name="chkMomRaceKorean" value="X"   />
+
+						Korean
+
+						<input type="checkbox" name="chkMomRaceSamoan" value="X"  />
+
+						Samoan
+
+						<input type="checkbox" name="chkMomRaceTongan" value="X"   /> 
+
+			            Tongan
+
+						<input type="checkbox" name="chkMomRaceVietnamese" value="X"   />
+
+						Vietnamese
+
+						<input type="checkbox" name="chkMomRaceGuamanian" value="X"   />
+
+						Guamanian or Chamorro
+
+			            <input type="checkbox" name="chkMomRaceAmIndian" value="X"   />
+
+			            American Indian or Alaska Native *<input type="text" name="txtMomRaceTribeSpec1"  value=""  size="36"  maxlength="60"/>
+
+			*<input type="text" name="txtMomRaceTribeSpec2"  value="" size="36"  maxlength="60"/>							
+
+			<input type="checkbox" name="chkMomRaceOtherAsian" value="X"  />
+
+			Other Asian *<input type="text" name="txtMomRaceAsianSpec1"  value=""  size="36"  maxlength="60"/> 
+
+			*<input type="text" name="txtMomRaceAsianSpec2"  value="" size="36"  maxlength="60"/>
+
+			<input type="checkbox" name="chkMomRacePacIslander" value="X"   />
+
+			Other Pacific Islander *<input type="text" name="txtMomRaceIslanderSpec1"  value=""  size="36"  maxlength="60"/> 
+
+			*<input type="text" name="txtMomRaceIslanderSpec2"  value="" size="36"  maxlength="60"/>
+
+		
+
+			<input type="checkbox" name="chkMomRaceOther" value="X"   />
+
+			Other *<input type="text" name="txtMomRaceOtherSpec1"  value=""  size="36"  maxlength="60"/> 
+
+			*<input type="text" name="txtMomRaceOtherSpec2"  value="" size="36"  maxlength="60"/>
+
+		
+
+		
+
+			<input type="checkbox" name="chkMomRaceUnknown" value="X"   />Unknown&nbsp;&nbsp;
+
+		
+
+				
+
+</div>		
+
+			
+
+<div class="certsection" id="mother_education">
+
+			<div class="hdr"><b>MOTHER EDUCATION</b></div>
+
+										
+
+			<input type="checkbox" name="chkMomEducation1" value="X"   />8th 
+			Grade or Less
+
+				
+
+			
+
+			<input type="checkbox" name="chkMomEducation2" value="X"   />9th - 
+			12th Grade, No Diploma
+
+												
+
+			<input type="checkbox" name="chkMomEducation3" value="X"   />High 
+			School Graduate or GED Completed
+
+		
+
+		
+
+			<input type="checkbox" name="chkMomEducation4" value="X"   />Some 
+			College Credit but No Degree
+
+		
+
+		
+
+			<input type="checkbox" name="chkMomEducation5" value="X"   />Associate 
+			Degree
+
+		
+
+		
+
+			<input type="checkbox" name="chkMomEducation6" value="X"   />Bachelor's 
+			Degree
+
+		
+
+		
+
+			
+
+			<input type="checkbox" name="chkMomEducation7" value="X"   />Master's 
+			Degree
+
+		
+
+		
+
+			
+
+			<input type="checkbox" name="chkMomEducation8" value="X"   />Doctorate
+
+		
+
+		
+
+			
+
+			<input type="checkbox" name="chkMomEducationN" value="X"   />None
+
+		
+
+		
+
+			<input type="checkbox" name="chkMomEducation9" value="X"   />Unknown&nbsp;
+
+</div>	
+
+			
+
+<div class="certsection" id="father_race">	
+
+	<div class="hdr">FATHER RACE</div>
+
+		
+
+		
+
+		<b>IF YES, CHECK ALL THAT APPLY</b>
+
+	
+
+		
+
+			<input type="checkbox" name="chkDadHispanicOriginY" value="X"   /> 
+
+			Yes&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkDadHispanicOriginN" value="X"   /> 
+
+			No &nbsp;
+
+			<input type="checkbox" name="chkDadHispanicOriginU" value="X"   /> 
+
+			Unknown
+
+			<input type="checkbox" name="chkDadHispanicMex" value="X"   />
+
+			Mexican, Mexican American, Chicano &nbsp; 
+
+			<input type="checkbox" name="chkDadHispanicPuertoRican" value="X"  />
+
+						Puerto Rican &nbsp;
+
+			<input type="checkbox" name="chkDadHispanicCuban" value="X"   />Cuban
+
+	
+
+			<input type="checkbox" name="chkDadHispanicOther" value="X"   />Other 
+	Spanish/Hispanic/Latino *<input type="text" name="txtDadHispanicOtherSpec"  value=""  size="60"  maxlength="60"/> 
+
+			Specify
+
+				
+
+		
+
+			<b>CHECK ALL THAT APPLY FOR RACE OF THE FATHER</b>
+
+			
+
+			<input type="checkbox" name="chkDadRaceWhite" value="X"   />White
+
+			
+
+			<input type="checkbox" name="chkDadRaceBlack" value="X"  />Black or 
+	African American
+
+			
+
+			<input type="checkbox" name="chkDadRaceChinese" value="X"   />Chinese
+
+			
+
+			<input type="checkbox" name="chkDadRaceJapanese" value="X"   />Japanese
+
+
+
+			
+
+			<input type="checkbox" name="chkDadRaceHawaiian" value="X"   />Native 
+	Hawaiian
+
+			
+
+			<input type="checkbox" name="chkDadRaceFilipino" value="X"   />Filipino
+
+			
+
+			<input type="checkbox" name="chkDadRaceAsianIndian" value="X"   />
+
+			Asian Indian
+
+			
+
+			<input type="checkbox" name="chkDadRaceKorean" value="X"   />Korean
+
+			
+
+			<input type="checkbox" name="chkDadRaceSamoan" value="X"   />
+
+			Samoan
+
+			
+
+			<input type="checkbox" name="chkDadRaceTongan" value="X"   /> 
+
+			Tongan
+
+			
+
+			<input type="checkbox" name="chkDadRaceVietnamese" value="X"   />Vietnamese
+
+			
+
+			<input type="checkbox" name="chkDadRaceGuamanian" value="X"   />
+
+			Guamanian or Chamorro
+
+		
+
+					
+
+			<input type="checkbox" name="chkDadRaceAmIndian" value="X"   />
+
+		
+
+			<label>American Indian or Alaska Native</label>
+
+			
+
+			*<input type="text" name="txtDadRaceTribeSpec1"  value=""  size="36"  maxlength="60"/>
+
+			*<input type="text" name="txtDadRaceTribeSpec2"  value="" size="36"  maxlength="60"/>
+
+		
+
+					
+
+			<input type="checkbox" name="chkDadRaceOtherAsian" value="X"   />
+
+			<label>Other Asian</label>
+
+	
+
+			
+
+			*<input type="text" name="txtDadRaceAsianSpec1"  value=""  size="36"  maxlength="60"/> 
+
+			*<input type="text" name="txtDadRaceAsianSpec2"  value="" size="36"  maxlength="60"/>
+
+		
+
+		
+
+			
+
+			<input type="checkbox" name="chkDadRacePacIslander" value="X"   />
+
+			Other Pacific Islander &nbsp; *<input type="text" name="txtDadRaceIslanderSpec1"  value=""  size="36"  maxlength="60"/> 
+
+			*<input type="text" name="txtDadRaceIslanderSpec2"  value="" size="36"  maxlength="60"/>
+
+				
+
+		
+
+			<input type="checkbox" name="chkDadRaceOther" value="X"   />
+
+			Other *<input type="text" name="txtDadRaceOtherSpec1"  value=""  size="36"  maxlength="60"/> 
+
+			*<input type="text" name="txtDadRaceOtherSpec2"  value="" size="36"  maxlength="60"/>
+
+				
+
+			
+
+			<input type="checkbox" name="chkDadRaceUnknown" value="X"   />Unknown&nbsp;&nbsp;
+
+		
+
+</div>
+
+<div class="certsection" id="father_education">
+
+<div class="hdr">FATHER EDUCATION</div>
+
+					
+
+			<input type="checkbox" name="chkDadEducation1" value="X"   />8th 
+	Grade or Less
+
+		
+
+			<input type="checkbox" name="chkDadEducation2" value="X"   />9th - 
+	12th Grade, No Diploma
+
+		
+
+			<input type="checkbox" name="chkDadEducation3" value="X"   />High 
+	School Graduate or GED Completed
+
+		
+
+			<input type="checkbox" name="chkDadEducation4" value="X"   />Some 
+	College Credit but No Degree
+
+		
+
+		
+
+			<input type="checkbox" name="chkDadEducation5" value="X"   />Associate 
+	Degree
+
+		
+
+		
+
+			<input type="checkbox" name="chkDadEducation6" value="X"   />Bachelor's 
+	Degree
+
+		
+
+		
+
+			<input type="checkbox" name="chkDadEducation7" value="X"   />Master's 
+	Degree
+
+		
+
+		
+
+			
+
+			<input type="checkbox" name="chkDadEducation8" value="X"   />Doctorate
+
+					
+
+		
+
+			<input type="checkbox" name="chkDadEducationN" value="X"   />None
+
+				
+
+			
+
+			<input type="checkbox" name="chkDadEducation9" value="X"   />Unknown&nbsp;
+
+</div>
+
+
+
+<div class="certsection" id="complications">	
+
+			
+
+		<div class="hdr">COMPLICATIONS OF LABOR &amp; DELIVERY</div>
+
+				<br/>
+
+			
+
+			<input type="checkbox" name="chkNoMorbidity" value="X"   />&nbsp;&nbsp; None
+
+		
+
+			<input type="checkbox" name="chkUnknownMorbidity" value="X"   />&nbsp;&nbsp; 
+		Unknown
+
+
+
+
+
+			<input type="checkbox" name="chkMaternalTransfusion" value="X"   />&nbsp;&nbsp; 
+
+		
+
+			<label>Maternal Transfusion</label>
+
+			
+
+			<input type="checkbox" name="chkPerinealLaceration" value="X"   />&nbsp;&nbsp; 
+		Perineal Laceration (Greater Than or Equal to 3rd Degree)
+
+							
+
+			
+
+			<input type="checkbox" name="chkRupturedUterus" value="X"   />&nbsp;&nbsp; 
+		Ruptured Uterus
+
+			
+
+
+
+			<input type="checkbox" name="chkUnplannedHysterectomy" value="X"   />&nbsp;&nbsp; 
+		Unplanned Hysterectomy
+
+		
+
+
+
+			<input type="checkbox" name="chkAdmissionICU" value="X"   />&nbsp;&nbsp; 
+		Admission to ICU
+
+							
+
+		
+
+			<input type="checkbox" name="chkUnplannedOperation" value="X"   />&nbsp;&nbsp; 
+		Unplanned Operating Room Procedure Following Delivery
+
+		
+
+		
+
+</div>
+
+<div class="certsection" id="infertility">		
+
+							
+
+		          <div class="hdr">INFERTILITY INFORMATION / MEDICAL RISK 
+					  FACTORS</div>
+
+							
+
+					
+
+				<input type="button" name="cmdPrevious13" style="font-size: 8pt; height:0; width:0; "/>
+
+			
+
+					
+
+				  Did You Take Any Fertility Drugs or Receive Any Medical 
+				  Procedures to Help You Get Pregnant With Your New Baby?
+
+				<input type="checkbox" name="chkInfertilityDrugsOrProcsY" value="X"   /> 
+
+				  Yes&nbsp;
+
+				<input type="checkbox" name="chkInfertilityDrugsOrProcsN" value="X"   /> 
+
+				  No If Yes to Above, How Long Had You Been Trying to Get 
+				  Pregnant Before You Took Any Fertility Drugs?&nbsp;		
+
+		
+
+					
+
+			<input type="checkbox" name="chkTimePriorToTreatment1" value="X"   />
+
+	
+
+	
+
+				  0 - 5 Months&nbsp;&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkTimePriorToTreatment2" value="X"   /> 
+
+				  6 - 11 Months &nbsp;&nbsp;
+
+			<input type="checkbox" name="chkTimePriorToTreatment3" value="X"   /> 
+
+				  1 - 2 Years &nbsp;&nbsp;
+
+			<input type="checkbox" name="chkTimePriorToTreatment4" value="X"  /> 
+
+				  3 - 4 Years &nbsp;&nbsp;
+
+			<input type="checkbox" name="chkTimePriorToTreatment5" value="X"  />
+
+				  5 - 6 Years &nbsp;&nbsp;
+
+			<input type="checkbox" name="chkTimePriorToTreatment6" value="X"   /> 
+
+				  6 Years&nbsp; Did You Use Any of the Following Fertility 
+				  Treatments?<i> <b>(PLEASE CHECK ALL THAT APPLY)</b> </i>
+
+				  &nbsp;<input type="checkbox" name="chkTreatFertilityDrug" value="X"   /> 
+
+				  Fertility-Enhancing Drugs
+
+		
+
+	
+
+			<input type="checkbox" name="chkTreatArtificialInsemination" value="X"   /> 
+
+				  Artificial Insemination or Intrauterine Insemination
+
+		
+
+		
+
+
+
+			<input type="checkbox" name="chkTreatAssistReprodTech" value="X"   /> 
+
+				  Assisted Reproductive Technology
+
+		
+
+		
+
+		
+
+			<input type="checkbox" name="chkTreatmentOther" value="X"   /> 
+
+				  Other Medical Treatment
+
+			<input type="text" name="txtTreatmentOtherSpecify"  value="" size="60"  maxlength="60"/>
+
+			<i>Specify</i>
+
+		
+
+		
+
+	
+
+			<input type="checkbox" name="chkTreatmentNoneOfAbove" value="X"   /> 
+
+				  None of the Above
+
+		
+
+</div>
+
+<div class="certsection" id="risk_factors">
+
+		
+
+		
+
+		
+
+		
+
+			<input type="checkbox" name="chkNoRiskFactors" value="X"   /> No 
+			Risk Factors&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkRiskFactorsUnknown" value="X"   /> 
+			Unknown Risk Factors
+
+		
+
+		
+
+	
+
+			<input type="checkbox" name="chkChronicRenalDisease" value="X"   /> 
+			Chronic Renal Disease&nbsp;
+
+
+
+		
+
+			<input type="checkbox" name="chkCystitis" value="X"   /> Cystitis
+
+			
+
+		
+
+			<input type="checkbox" name="chkGestationalCarrierDelivery" value="X"   /> 
+			Gestational Carrier Delivery
+
+			
+
+	
+
+			<input type="checkbox" name="chkHyperthyroid" value="X"   /> 
+			Hyperthyroid
+
+			
+
+			<input type="checkbox" name="chkHypothyroid" value="X"   /> 
+			Hypothyroid&nbsp;
+
+	
+
+		
+
+			<input type="checkbox" name="chkLupus" value="X"   /> Lupus&nbsp;
+
+		
+
+		
+
+
+
+			<input type="checkbox" name="chkRheumatoidArthritis" value="X"   /> 
+			Rheumatoid Arthritis&nbsp;
+
+	
+
+		
+
+			<input type="checkbox" name="chkSjogrensSyndrome" value="X"   /> 
+			Sjogrens Syndrome
+
+			
+
+			<input type="checkbox" name="chkAntiphospholipidSyndrome" value="X"   /> 
+			Antiphospholipid Syndrome
+
+</div>
+
+<div class="certsection" id="risk2">		
+
+	
+
+<div class="hdr">MEDICAL RISK FACTORS 2</div>
+
+						
+
+			<input type="checkbox" name="chkDiabetesG" value="X"   /> 
+	Gestational Diabetes (Diagnosis in this Pregnancy)
+
+			
+
+			<input type="checkbox" name="chkDiabetesI" value="X"   /> 
+	Pre-Existing Diabetes, Insulin Dependent&nbsp;&nbsp; 
+
+			<input type="checkbox" name="chkDiabetesN" value="X"   /> 
+
+			Pre-Existing Diabetes, Non-Insulin Dependent
+
+				
+
+	
+
+			<input type="checkbox" name="chkHypertensionC" value="X"  /> Chronic 
+	Hypertension &nbsp;
+
+			<input type="checkbox" name="chkHypertensionE" value="X"   /> 
+	Eclampsia &nbsp;
+
+			<input type="checkbox" name="chkHypertensionH" value="X"   /> HELLP 
+	Syndrome &nbsp;
+
+			<input type="checkbox" name="chkHypertensionP" value="X"   /> 
+	Pregnancy Induced Hypertension
+
+			
+
+			<input type="checkbox" name="chkPreviousPreTerm" value="X"   /> 
+
+			Previous Preterm Infant &nbsp; 
+
+			<input type="checkbox" name="chkPrevious4000Grams" value="X"   />  
+
+			Previous Infant Over 4,000 grams&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkPreviousOther" value="X"   /> 
+
+			Previous Infant with Other Poor Outcomes&nbsp;
+
+		
+
+		
+
+			<input type="checkbox" name="chkAsthmaM" value="X"   /> 
+
+			Asthma: Mild, Treated with Over the Counter Meds &nbsp;
+
+			<input type="checkbox" name="chkAsthmaS" value="X"  /> 
+
+			Asthma: Severe, Treated with Prescription Meds&nbsp;
+
+		
+
+		
+
+			<input type="checkbox" name="chkHeartDiseaseM" value="X"   /> 
+
+			Heart Disease: Mild&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkHeartDiseaseS" value="X"   /> 
+
+			Heart Disease: Severe&nbsp; *Number of Previous C-Sections (If Any)
+
+			<input type="text" name="txtNumberOfCSections"  value="" size="3" />&nbsp;
+
+		
+
+		
+
+			<input type="checkbox" name="chkAnxiety" value="X"   /> Anxiety
+
+		
+
+			<input type="text" name="txtAnxietyTreatedWith"  value="" size="60"  maxlength="60"/> <i>
+
+			Medications Used&nbsp; </i>
+
+			&nbsp;<input type="checkbox" name="chkBiPolar" value="X"   /> Bipolar 
+	Disorder
+
+	
+
+			<input type="text" name="txtBiPolarTreatedWith"  value="" size="60"  maxlength="60"/> <i>
+
+		Medications Used&nbsp;</i>&nbsp;
+
+		
+
+		
+
+		
+
+			<input type="checkbox" name="chkDepression" value="X"   /> 
+	Depression
+
+
+
+	
+
+			<input type="text" name="txtDepressionTreatedWith"  value="" size="60"  maxlength="60"/> <i>
+
+		Medications Used&nbsp;</i>&nbsp;
+
+		
+
+		
+
+		
+
+			<input type="checkbox" name="chkSchizophrenia" value="X"   /> 
+	Schizophrenia
+
+		
+
+			<input type="text" name="txtSchizophreniaTreatedWith"  value="" size="60"  maxlength="60"/> <i>
+
+			Medications Used&nbsp; </i>
+
+			
+
+			<input type="checkbox" name="chkIllicitDrugUse" value="X"   /> 
+	Illicit Drug Use
+
+
+
+			<input type="text" name="txtIllicitDrugUseSpecify"  value="" size="60"  maxlength="60"/> <i>
+
+		Specify Drug Used&nbsp; </i>
+
+
+
+</div>
+
+<div class="certsection" id="delivery">			
+
+	<b>METHOD OF DELIVERY / CHARACTERISTICS OF LABOR &amp; DELIVERY</b>
+
+		
+
+		
+
+		Fetal Presentation at Delivery
+
+		
+
+		
+
+			<input type="checkbox" name="chkFetalPresentationC" value="X"   /> 
+	Cephalic&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkFetalPresentationB" value="X"   /> 
+	Breech&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkFetalPresentationO" value="X"   /> 
+	Other &nbsp;
+
+			<input type="checkbox" name="chkFetalPresentationU" value="X"   /> 
+	Unknown
+
+		
+
+		
+
+			
+
+			<i>Please Check Appropriate Box on the Type of Delivery</i>
+
+		
+
+		
+
+		
+
+			<input type="checkbox" name="chkMethodOfDelivery1" value="X"   /> 
+	Spontaneous Vaginal 
+
+			<input type="button" value="?" name="cmdHelpSpontaneousVaginal" style="background-color: #FFFDD7; height:20; width:19" tabindex="1000"/>
+
+	
+
+
+
+			<input type="checkbox" name="chkMethodOfDelivery4" value="X"   /> 
+	Vacuum Vaginal: Successful
+
+			<input type="button" value="?" name="cmdHelpVacuumSuccess" style="background-color: #FFFDD7; height:20; width:19" tabindex="1000"/>
+
+
+
+
+
+			<input type="checkbox" name="chkMethodOfDelivery6" value="X"   /> 
+
+			Cesarean
+
+			<input type="button" value="?" name="cmdHelpCesarean" style="background-color: #FFFDD7; height:20; width:19" tabindex="1000"/>
+
+		
+
+		
+
+
+
+			<input type="checkbox" name="chkMethodOfDelivery2" value="X"   /> 
+
+			Forceps Vaginal: Successful&nbsp;
+
+			
+
+			<input type="checkbox" name="chkMethodOfDelivery5" value="X"   /> 
+
+			Vacuum Vaginal: Unsuccessful&nbsp;
+
+			
+
+			<input type="checkbox" name="chkMethodOfDeliveryU" value="X"   /> 
+	Unknown
+
+		
+
+		
+
+		
+
+			<input type="checkbox" name="chkMethodOfDelivery3" value="X"   /> 
+
+			Forceps Vaginal: Unsuccessful If Cesarean, Was a Trial of Labor 
+	Attempted 
+
+			<input type="checkbox" name="chkCesareanTrial" value="X"   /> 
+
+		
+
+			<i>Check if Yes </i>
+
+			
+
+		
+
+		
+
+		
+
+			<i>Characteristics of Labor &amp; Delivery 
+
+			<b>(PLEASE CHECK ALL THAT APPLY)</b></i>
+
+		
+
+		
+
+			
+
+			<input type="checkbox" name="chkNoCharOfLabor" value="X"   /> 
+
+			None&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkUnknownCharOfLabor" value="X"   /> 
+
+			Unknown
+
+		
+
+		
+
+	
+
+			<input type="checkbox" name="chkInductionOfLabor" value="X"   /> 
+	Induction of Labor
+
+			
+
+		
+
+			<input type="checkbox" name="chkElectiveInduction" value="X"   /> 
+
+			Elective Induction
+
+			
+
+			
+
+			<input type="checkbox" name="chkAugmentationOfLabor" value="X"   /> 
+	Augmentation of Labor (Stimulation)
+
+			
+
+		
+
+		
+
+		
+
+			<input type="checkbox" name="chkCordProlapse" value="X"   /> 
+
+			Cord Prolapse
+
+			
+
+		
+
+			<input type="checkbox" name="chkTrueKnot" value="X"   /> 
+
+			True Knot in Cord
+
+			
+
+	 
+
+			<input type="checkbox" name="chkMeconium" value="X"   /> 
+
+			Thick Meconium Staining of Amniotic Fluid
+
+			
+
+		
+
+		
+
+		
+
+			<input type="checkbox" name="chkPlacentaPrevia" value="X"   /> 
+
+			Placenta Previa&nbsp;
+
+		
+
+			<input type="checkbox" name="chkAbruptionPlacenta" value="X"   /> 
+
+			Abruption Placenta&nbsp;
+
+		
+
+			<input type="checkbox" name="chkAnesthesia" value="X"   /> 
+
+			Epidural or Spinal Anesthesia&nbsp;
+
+		
+
+			<input type="checkbox" name="chkNonVertexPresentation" value="X"   /> 
+
+			Non-Vertex Presentation&nbsp;
+
+		
+
+			<input type="checkbox" name="chkIntolerance" value="X"   /> Fetal 
+	Intolerance of Labor&nbsp;
+
+			
+
+			<input type="checkbox" name="chkSteroids" value="X"   /> 
+
+			Steroids for Fetal Lung Maturation&nbsp; 
+
+		
+
+		
+
+		
+
+			<input type="checkbox" name="chkClinicalChorio" value="X"   /> 
+	Clinical Chorioamnionitis Diagnosed During Labor and/or Maternal Temperature 
+	Greater or Equal to 38 C (100.4 F)&nbsp; 
+
+		
+
+		
+
+			<input type="checkbox" name="chkMomAntibiotics" value="X"   /> 
+
+			Antibiotics Received by Mother During Labor&nbsp;
+
+				 
+
+			<input type="checkbox" name="chkForcepsM" value="X"   /> Mid Forceps 
+	Successful/Unsuccessful&nbsp;&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkForcepsO" value="X"   /> 
+
+			Outlet Forceps Successful/Unsuccessful&nbsp;
+
+		
+
+</div>
+
+<div class="certsection" id="infections">	
+
+		
+
+	
+
+<b>INFECTIONS/PROCEDURES AND ONSET OF LABOR</b>
+
+		
+
+		
+
+			<i>Infections Present And/Or Treated During This Pregnancy <b>
+	(PLEASE CHECK ALL THAT APPLY)</b> </i>
+
+			
+
+		
+
+		
+
+			
+
+			<input type="checkbox" name="chkNoMaternalInfections" value="X"   />&nbsp;&nbsp; 
+	None
+
+	
+
+	
+
+			<input type="checkbox" name="chkHepatitisA" value="X"   />&nbsp;&nbsp; 
+	Hepatitis A
+
+			
+
+		
+
+	
+
+			<input type="checkbox" name="chkHerpes" value="X"   />&nbsp;&nbsp; Genital 
+	Herpes (HSV)				
+
+	
+
+			<input type="checkbox" name="chkRubella" value="X"   />&nbsp;&nbsp; Rubella
+
+							
+
+			<input type="checkbox" name="chkMaternalInfectionsUnknown" value="X"   />&nbsp;&nbsp; 
+	Unknown
+
+			
+
+			<input type="checkbox" name="chkHepatitisB" value="X"   />&nbsp;&nbsp; 
+	Hepatitis B					
+
+	
+
+			<input type="checkbox" name="chkHPV" value="X"   />&nbsp;&nbsp; Human 
+	Parvovirus (HPV)
+
+			<input type="button" value="?" name="cmdHelpHPV" style="background-color: #FFFDD7; height:20; width:19" tabindex="1000"/>
+
+		
+
+		
+
+			<input type="checkbox" name="chkToxoplasmosis" value="X"   />&nbsp;&nbsp; 
+	Toxoplasmosis
+
+		
+
+		
+
+			<input type="checkbox" name="chkGonorrhea" value="X"   />&nbsp;&nbsp; 
+	Gonorrhea&nbsp;
+
+		
+
+			<input type="checkbox" name="chkHepatitisC" value="X"  />&nbsp;&nbsp; 
+	Hepatitis C&nbsp;
+
+		
+
+	
+
+			<input type="checkbox" name="chkBacterialVaginosis" value="X"   />&nbsp;&nbsp; 
+	Bacterial Vaginosis&nbsp; 
+
+			
+
+			<input type="checkbox" name="chkUTI" value="X"   />&nbsp;&nbsp; Urinary Tract 
+	Infection&nbsp;
+
+		
+
+		
+
+	
+
+	
+
+			<input type="checkbox" name="chkSyphilis" value="X"   />&nbsp;&nbsp; Syphilis&nbsp;
+
+		
+
+		
+
+			<input type="checkbox" name="chkHIV_AIDS" value="X"   />&nbsp;&nbsp; HIV/AIDS&nbsp;
+
+		
+
+	
+
+			<input type="checkbox" name="chkGroupBStrep" value="X"   />&nbsp;&nbsp; Group 
+	B Strep&nbsp;
+
+	
+
+
+
+			<input type="checkbox" name="chkPyelonephritis" value="X"   />&nbsp;&nbsp; 
+	Pyelonephritis&nbsp; 
+
+		
+
+	
+
+	
+
+			<input type="checkbox" name="chkChlamydia" value="X"   />&nbsp;&nbsp; 
+	Chlamydia&nbsp;
+
+		
+
+		
+
+			<input type="checkbox" name="chkCytomeglovirus" value="X"   />&nbsp;&nbsp; 
+	Cytomegalovirus&nbsp; 			
+
+			<input type="checkbox" name="chkListeria" value="X"   />&nbsp;&nbsp; Listeria&nbsp;
+
+			
+
+			<i>Obstetric Procedures <b>(PLEASE CHECK ALL THAT APPLY)</b></i>
+
+		
+
+	
+
+			<input type="checkbox" name="chkNoObProcedures" value="X"   />&nbsp;&nbsp; 
+	None
+
+		 
+
+			<input type="checkbox" name="chkCervicalCerclage" value="X"   />
+
+		
+
+			Cervical Cerclage&nbsp;
+
+	
+
+	
+
+			<input type="checkbox" name="chkExternalCephalicVersionU" value="X"   />&nbsp;&nbsp; 
+	Unknown Version
+
+		
+
+		
+
+			<input type="checkbox" name="chkAmniocentesis" value="X"   />&amp;&nbsp;&nbsp; 
+	Amniocentesis&nbsp;
+
+	 
+
+			<input type="checkbox" name="chkExternalCephalicVersionS" value="X"   />
+
+		 
+
+			Successful Version&nbsp;
+
+	
+
+	
+
+			<input type="checkbox" name="chkTocolysis" value="X"   />&nbsp;&nbsp; 
+	Tocolysis&nbsp;
+
+		
+
+		
+
+
+
+	
+
+			<input type="checkbox" name="chkCervicalRipening" value="X"   />&nbsp;&nbsp; 
+	Cervical Ripening&nbsp; 
+
+			<input type="checkbox" name="chkExternalCephalicVersionF" value="X"   />
+
+
+
+	
+
+			Failed Version&nbsp;
+
+	
+
+	
+
+			<input type="checkbox" name="chkChorionicVillusSampling" value="X"   />&amp;nb&nbsp;&nbsp; 
+	Chorionic Villus Sampling&nbsp;
+
+		
+
+			
+
+			<i>Onset of Labor PLEASE CHECK ALL THAT APPLY)</i>
+
+			&nbsp;<input type="checkbox" name="chkPrematureRupture" value="X"   /> &nbsp; 
+	Premature Rupture of Membrane
+
+	
+
+
+
+			<input type="checkbox" name="chkProlongedLabor" value="X"   />&nbsp;&nbsp; 
+
+			
+
+			<input type="checkbox" name="chkPrecipitousLabor" value="X"   />&nbsp;&nbsp; 
+	Precipitous Labor *Birth Weight&nbsp; put type=&quot;text&quot; name=&quot;txtBirthWeightGrams&quot; 
+	value=&quot;&quot; size=&quot;4&quot; maxlength=&quot;4&quot;/&gt;Grams&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<input type="text" name="txtBirthWeightPounds"  value="" size="2"  maxlength="2"/>lbs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+			<input type="text" name="txtBirthWeightOunces"  value="" size="2"  maxlength="2"/>oz&amp;oz&nbsp;&nbsp;&nbsp; 
+	Single(1), Twin(2), Triplet(3), etc.&nbsp; 
+
+	
+
+			<input type="text" name="txtPlurality"  value="" size="2"  maxlength="2"/>&nbsp; 
+	Birth Order put type=&quot;text&quot; name=&quot;txtBirthOrder&quot; value=&quot;&quot; size=&quot;2&quot; 
+	maxlength=&quot;2&quot;/&gt;&nbsp; 
+
+		
+
+			<label>File Number of First Infant Born (Plural Pregnancy)</label>
+
+		
+
+			<input type="text" name="txtPrevPluralSFN"  value="" size="20"  maxlength="12"/>&nbsp; 
+	In Multiple Births, How Many Born Alive
+
+			<input type="text" name="txtNumberLiveBorn"  value="" size="2"  maxlength="2"/>
+
+		
+
+		
+
+			Gestation Weeks&nbsp; 
+
+		
+
+			<input type="text" name="txtGestation"  value="" size="2"  maxlength="2"/>
+
+	&nbsp;
+
+		
+
+		
+
+	
+
+			<label>*APGAR 1 Minute&nbsp; </label>
+
+	
+
+			<input type="text" name="txtAPGAR1"  value="" size="2"  maxlength="2"/>&nbsp; 
+	*APGAR 5 Minutes
+
+			<input type="text" name="txtAPGAR5"  value="" size="2"  maxlength="2"/>&nbsp; 
+	*APGAR 10 Minutes
+
+			<input type="text" name="txtAPGAR10"  value="" size="2"  maxlength="2"/>
+
+			
+
+			
+
+</div>
+
+<div class="certsection" id="newborn">			
+
+			
+
+			<div class="hdr">NEWBORN MEDICAL</div>
+
+			
+
+			<input type="checkbox" name="chkChildTransferred" value="X"   />&nbsp;&nbsp; 
+			Infant Transferred
+
+						
+
+			
+
+			<label>Name of Facility Transferred To</label>
+
+		
+
+			<input type="text" name="txtChildTransferredFacility"  value="" size="40"  style="background-color: #ECECFF" maxlength="60"/> 
+
+			Facility Code
+
+			<input type="text" name="txtChildTransferredFacilityCode" value="" size="3"  style="width:33; height:26" maxlength="3"/>
+
+		
+
+			<label>	State Infant Transferred To</label>
+
+			
+
+			<input type="text" name="txtChildTransferredState"  value="" size="25"  style="background-color: #EDF8EB" maxlength="25"/> 		
+
+		
+
+			<label>Infant Deceased</label> 
+
+	
+
+			<input type="checkbox" name="chkDeceasedY" value="X"   /> Yes&nbsp;&nbsp;
+
+			<input type="checkbox" name="chkDeceasedN" value="X"   /> No&nbsp; Date 
+			of Death
+
+			<input type="text" name="txtDeathMM"  value="" size="2"  style="width: 30" maxlength="2"/>
+
+			<input type="text" name="txtDeathDD"  value="" size="2"  style="width: 30" maxlength="2"/>
+
+			<input type="text" name="txtDeathCCYY"  value="" size="4"  style="width: 45" maxlength="4"/>
+
+		
+
+			
+
+			<label>Death State&nbsp;</label> 
+
+			
+
+			<input type="text" name="txtDeathState"  value="" size="25"  style="background-color: #EDF8EB" maxlength="25"/>
+
+		
+
+		
+
+			<label>*State File Number of Death Certificate</label>
+
+		
+
+			<input type="text" name="txtDeathSFN"  value="" size="20"  maxlength="15"/>
+
+		
+
+		
+
+			<input type="checkbox" name="chkHepVac" value="X"   />&nbsp;&nbsp; Hepatitis 
+			Vaccination<i>&nbsp; </i>*Date Given
+
+			<input type="text" name="txtHepMM"  value="" size="2"  style="width: 30" maxlength="2"/>
+
+			<input type="text" name="txtHepDD"  value="" size="2"  style="width: 30" maxlength="2"/>
+
+			<input type="text" name="txtHepCCYY"  value="" size="4"  style="width: 45" maxlength="4"/>
+
+			
+
+			<input type="checkbox" name="chkHepRefused" value="X"   />&nbsp;&nbsp; 
+			Hepatitis Refused
+
+				
+
+			
+
+			<label>Newborn Screening Number&nbsp; </label>
+
+	
+
+
+
+			<input type="text" name="txtNewbornScreeningNumber"  value="" size="15"  maxlength="15"/>&nbsp; 
+			Verify Screening Number&nbsp;<input type="text" name="txtNewbornScreeningNumberVerify"  value="" size="15"  maxlength="15"/>&nbsp; 
+
+		
+
+		
+
+			<input type="checkbox" name="chkNewbornScreeningRefused" value="X"   />
+
+	
+
+			Newborn Screening Refused
+
+		
+
+			
+
+			<label>Medical Notes</label>
+
+		
+
+			<input type="text" name="txtMedicalNotes"  value="" size="60"  maxlength="60"/>
+
+		
+
+			
+
+</div>
+
+<div class="certsection" id="abnormal">			
+
+<div class="hdr">ABNORMAL CONDITIONS OF NEWBORN</div>
+
+									
+
+			PLEASE CHECK ALL THAT APPLY		
+
+		
+
+			<input type="checkbox" name="chkNoAbnormalConditions" value="X"   />&nbsp;&nbsp; 
+	None
+
+		
+
+			<br/>	
+
+		
+
+			<input type="checkbox" name="chkUnknownAbnormalConditions" value="X"   />&nbsp;&nbsp; 
+	Unknown
+
+		
+
+		<br/>
+
+			
+
+	
+
+			<input type="checkbox" name="chkAnemia" value="X"   /> &nbsp; Anemia&nbsp;
+
+			<br/>					
+
+			<input type="checkbox" name="chkAssistedVent30Mins" value="X"   /> &nbsp; 
+	Assisted Ventilation Required Immediately Following Delivery (first 30 
+	minutes)&nbsp;		
+
+		<br/>
+
+			<input type="checkbox" name="chkAssistedVent6Hours" value="X"   /> &nbsp; 
+	Assisted Ventilation Required for More Than Six Hours&nbsp;
+
+			<br/>		
+
+			<input type="checkbox" name="chkMeningitis" value="X"   /> &nbsp; 
+	Meningitis&nbsp;
+
+				<br/>	
+
+			<input type="checkbox" name="chkNICUS" value="X"   /> &nbsp; NICU 
+	Admission 24 Hours or Less&nbsp;
+
+			<br/>
+
+			<input type="checkbox" name="chkNICUL" value="X"   /> 
+
+			NICU Admission Greater than 24 Hours&nbsp;
+
+		
+
+		
+
+			<br/>
+
+			<input type="checkbox" name="chkSubstanceAbuse" value="X"   /> &amp;n &nbsp; 
+	Perinatal Substance Abuse&nbsp;
+
+		<br/>
+
+		
+
+	
+
+		
+
+			<input type="checkbox" name="chkRDS" value="X"   /> &nbsp; Respiratory 
+	Distress Syndrome (RDS) / Hyaline Membrane Disease&nbsp;
+
+		<br/>
+
+		
+
+		
+
+	
+
+			<input type="checkbox" name="chkSeizure" value="X"   /> 
+
+	
+
+			Seizure or Serious Neurologic Dysfunction
+
+			
+
+<br/>	
+
+		
+
+			<input type="checkbox" name="chkInjury" value="X"   /> &nbsp; Significant 
+	Birth Injury&nbsp;
+
+		
+
+	<br/>	
+
+	
+
+		
+
+			<input type="checkbox" name="chkSurfactant" value="X"   /> &nbsp; 
+	Surfactant Replacement Therapy&nbsp;
+
+		
+
+		
+
+			
+
+			<input type="checkbox" name="chkNewbornAntibiotics" value="X"   /> &nbsp; 
+	Antibiotics for Suspected Neonatal Sepsis&nbsp;
+
+</div>
+
+
+
+<div class="certsection" id="congenital1">
+
+						
+
+<div class="hdr">CONGENITAL ANOMALIES OF NEWBORN</div>
+
+			<br/>				
+
+			<input type="checkbox" name="chkNoCongAnom" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+	
+
+			None
+
+
+
+			<br/>
+
+			<input type="checkbox" name="chkUnknownCongAnom" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+			Unknown
+
+			<br/>					
+
+			<input type="checkbox" name="chkAnencephaly" value="X"   style="border: 1px solid #FFFFFF; float:left"/>			
+
+			Anencephaly&nbsp;
+
+			<br/>
+
+			<input type="checkbox" name="chkMeningSpinBif" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+			Meningomyelocele / Spina Bifida
+
+			<br/>
+
+			<input type="checkbox" name="chkHydrocephalus" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+			Hydrocephalus&nbsp;
+
+			 <br/>
+
+			<input type="checkbox" name="chkMicrocephalus" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+			Microcephalus&nbsp;
+
+			<br/>	
+
+		
+
+			<input type="checkbox" name="chkCongDiaphHernia" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+		
+
+			Diaphragmatic Hernia&nbsp;
+
+			<br/>
+
+
+
+			<input type="checkbox" name="chkRectalAtresia" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+			Rectal Atresia&nbsp;
+
+			<br/>	
+
+			<input type="checkbox" name="chkOmphalocele" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+			Omphalocele&nbsp;
+
+			<br/>	
+
+			<input type="checkbox" name="chkTEFEA" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+			Tracheo-esophageal Fistula / Esophageal Atresia
+
+<br/>
+
+			<input type="checkbox" name="chkGastroschisis" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+
+
+			Gastroschisis&nbsp;
+
+<br/>
+
+	
+
+			<input type="checkbox" name="chkHypospadias" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+		Hypospadias&nbsp;
+
+	<br/>				
+
+
+
+			<input type="checkbox" name="chkRenalAgenesis" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+		
+
+			Renal Agenesis&nbsp;
+
+		<br/>	
+
+	
+
+			<input type="checkbox" name="chkDactyly" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+		Polydactyly / Syndactyly / Adactyly&nbsp;
+
+				<br/>	
+
+
+
+			<input type="checkbox" name="chkClubFoot" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+	
+
+			Club Foot&nbsp;
+
+				<br/>
+
+
+
+			<input type="checkbox" name="chkCNS" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+			
+
+			Central Nervous System
+
+		<br/>
+
+			<input type="text" name="txtCNS_Specify"  value="" size="60"  maxlength="60"/>
+
+			<i>Specify </i>
+
+			&nbsp;<input type="checkbox" name="chkCCHD" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+		
+
+			Cyanotic Congenital Heart Disease
+
+		<br/>
+
+			<input type="text" name="txtCCHD_Specify"  value="" size="60"  maxlength="60"/> 
+
+			Specify
+
+			<br/>
+
+
+
+			<input type="checkbox" name="chkOtherCHD" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+
+
+			Other Congenital Heart Disease
+
+	
+
+			<input type="text" name="txtOtherCHD_Specify"  value="" size="60"  maxlength="60"/> 
+
+          <i>Specify </i>
+
+			&nbsp;<input type="checkbox" name="chkOtherGI" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+		
+
+			Other Gastrointestinal
+
+		
+
+			<input type="text" name="txtOtherGI_Specify"  value="" size="60"  maxlength="60"/> 
+
+			<i>Specify </i>
+
+			&nbsp;<input type="checkbox" name="chkMalfGen" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+	
+
+			Malformation of Genitalia
+
+		
+
+			<input type="text" name="txtMalfGenSpecify"  value="" size="60"  maxlength="60"/> 
+
+			<i>Specify </i>
+
+	
+
+</div>
+
+<div class="certsection" id="congenital2">
+
+					
+
+   <div class="hdr">CONGENITAL ANOMALIES OF NEWBORN 2</div>
+
+							
+
+
+
+			<input type="checkbox" name="chkUrogenital" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+	
+
+		
+
+			Other Urogenital Anomalies 
+
+		
+
+			<input type="text" name="txtUrogenitalSpecify"  value="" size="60"  maxlength="60"/> 
+
+	<i>Specify </i>
+
+									
+
+		
+
+			<input type="checkbox" name="chkLimbReduction" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+	
+
+			Limb Reduction
+
+					
+
+			<input type="text" name="txtLimbReductionSpecify"  value="" size="60"  maxlength="60"/> 
+
+			<i>Specify </i>
+
+					
+
+			<input type="checkbox" name="chkOtherLimb" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+	
+
+			Other Limb Anomalies
+
+			<input type="text" name="txtOtherLimbSpecify"  value="" size="60"  maxlength="60"/> 
+
+		<i>Specify</i>
+
+				
+
+
+
+			<input type="checkbox" name="chkOtherMusc" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+
+
+			Other Musculoskeletal Anomalies
+
+			
+
+
+
+			<input type="text" name="txtOtherMuscSpecify"  value="" size="60"  maxlength="60"/> 
+
+		<i>Specify </i>
+
+							
+
+			<input type="checkbox" name="chkDownSyndrome" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+			
+
+			Down Syndrome&nbsp; 
+
+			
+
+			
+
+			<input type="checkbox" name="chkDownKaryotypeC" value="X"   /> 
+	Karyotype Confirmed 
+
+			
+
+			<input type="checkbox" name="chkDownKaryotypeP" value="X"   /> 
+	Karyotype Pending&nbsp;							
+
+
+
+			<input type="checkbox" name="chkChromAnom" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+		
+
+			Chromosomal Anomaly
+
+			
+
+
+
+			<input type="text" name="txtChromSpecify"  value="" size="60"  maxlength="60"/> 
+
+	<i>Specify </i>
+
+			
+
+			<input type="checkbox" name="chkChromAnomKaryotypeC" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+		
+
+	Chromosomal Karyotype Confirmed&nbsp; 
+
+		
+
+			<input type="checkbox" name="chkChromAnomKaryotypeP" value="X"   /> 
+	Chromosomal Karyotype Pending 		
+
+			
+
+			<input type="checkbox" name="chkCleftL" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+			
+
+			Cleft Lip&nbsp;&nbsp;
+
+			
+
+		
+
+			<input type="checkbox" name="chkCleftP" value="X"   /> 
+
+			Cleft Palate 
+
+		
+
+			<input type="checkbox" name="chkCleftW" value="X"  />&nbsp;Cleft Lip with 
+	Cleft Palate&nbsp;
+
+						
+
+			<input type="checkbox" name="chkOtherCongAnom" value="X"   style="border: 1px solid #FFFFFF; float:left"/>
+
+		
+
+			<label>Other Congenital Anomalies&nbsp;</label>
+
+			
+
+			
+
+			<input type="text" name="txtOtherCongAnomSpecify"  value="" size="60"  maxlength="60"/> <i>
+	Specify </i>
+
+			&nbsp;
+
+			
+
+</div>
+
+			
+
+			
+
+			
+
+</form>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
