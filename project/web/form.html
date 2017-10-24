@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About iHealth Birth Certificate App</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="app.css">
+</head>
+<body>
+
+ <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">iHealth</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li ><a href="index.html">Home</a></li>
+        <li ><a href="about.html">About</a></li>
+<!--         <li><a href="#contact">Contact</a></li> -->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="active" href="register.html">Register  <i class="fa fa-user-plus"></i></a></li>
+        <li><a href="login.html">Login  <i class="fa fa-user"></i></a></li>
+      </ul>
+    </div>
+  </div>
+ </nav>
+
+ <div class="form"  >
+     <form  id="frmDataEntry" method="post" action="#"> 
+      <div>
+        <div> 
+          This is just a demo. Content are subject to changes      
+        </div>      
+
+     <div class="certsection" id="newborn_information">
+
+      <div class="hdr">NEWBORN INFORMATION</div>      
+
+          
+
+      <label>State File Number</label> 
+
+      
+
+      <input type="text" name="txtStateFileNumber"  size="15"  maxlength="12"/><br/>
+
+          
+
+      <label>Newborn Medical Record Number:</label>
+
+    
+
+      <input type="text" name="txtChildMRN"   size="25"  maxlength="25"/><br/>    
+
+      <label>Alternate Medical Record Number:</label>  
+
+      <input type="text" name="txtChildAlternateMRN"  size="25"  maxlength="25"/><br/>         
+
+      <label>Child First Name:</label>
+
+      <input type="text" name="txtChildFirst"  size="50"/><br/>
+
+      <label>Child Middle Name</label>   
+
+      <input type="text" name="txtChildMiddle"   size="50"  maxlength="30"/><br/>     
+
+      <label>Child Last Name</label>
+
+      <input type="text" name="txtChildLast" size="50"  maxlength="25"/><br/>     
+
+      <label>Child Suffix:</label>
+
+      <input type="text" name="txtChildSuffix" value="" /> <br/>               
+
+      <label>Child Sex:</label>
+
+      
+
+      <input type="checkbox" name="chkGenderM" value="X" /> Male
+
+      <input type="checkbox" name="chkGenderF" value="X" /> Female
+
+      <input type="checkbox" name="chkGenderN" value="X"  /> Not Yet 
+      Determined
+
+      <br/>
+
+      <label>Date of Birth</label>      
+
+      
+
+      <input type="text" name="txtBirthMM" value="" size="2"  maxlength="2" style="width: 30"/> 
+
+      <input type="text" name="txtBirthDD" value="" size="2"  maxlength="2" style="width: 30"/> 
+
+      <input type="text" name="txtBirthCCYY" value="" size="4"  style="width: 45" maxlength="4"/>
+
+    <br/>
+      
+
+      <label>*Time of Birth</label>  
+
+      <input type="text" name="txtTimeOfBirthHH"  value="" size="2"  maxlength="2" style="width: 30"/> 
+
+      <input type="text" name="txtTimeOfBirthMM"  value="" size="2"  maxlength="2" style="width: 30"/>
+
+        
+
+</div>  
+      </div>
+
+      <div>
+        <input type="submit" name="submit"  value="confirm and submit!" onclick="javascript:window.location.href='submit.html'; return false;">
+      </div>
+       
+     </form>
+  </div>
+
+ <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+ <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+</html>
