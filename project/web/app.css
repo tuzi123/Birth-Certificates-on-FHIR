@@ -26,11 +26,6 @@ h1 {
                  0px 8px 13px rgba(0,0,0,0.1),
                  0px 18px 23px rgba(0,0,0,0.1);
 }
-.search{
-    margin-top: 17%;
-    margin-left:10%;
-    margin-right: 10%
-}
 
 hr {
     width: 400px;
@@ -54,14 +49,14 @@ img{
     width:50%;
 }
 
-.login{
+.login,.search{
     margin-top: 10%;
     margin-left:10%;
     margin-right: 10%
 }
 
 .btn-login,
-.btn-register {
+.btn-register{
     background-color: #59B2E0;
     outline: none;
     color: #fff;
@@ -81,4 +76,16 @@ img{
     border-color: #53A3CD;
 }
 
+.form{
+    background:white;
+    /*background: white;*/
+    padding-right: 2%;
+    padding-left:2%;
+    padding-bottom: 2%;
+    text-align: justify;
+    color:black;
+    margin-top: 10%;
+    margin-left:10%;
+    margin-right: 10%
+}
 
