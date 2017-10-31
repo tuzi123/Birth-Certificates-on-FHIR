@@ -44,7 +44,9 @@
   <form  id="frmDataEntry" method="post" action="#"> 
     <div>
       <div> 
+        <br>
         <h2>Birth Registration Form</h2><br>
+        <hr class="formHr">  
       </div>      
       
       <div class="certsection" id="newborn_information">
@@ -74,24 +76,24 @@
         <input id="childBirth"/>&nbsp;&nbsp;&nbsp;          
 
         <label>Child Sex:</label>
-        <input id="childGender"/><br/>   
+        <input id="childGender"/><br/> 
+        <hr class="formHr">  
       </div>
 
-      <div class="certsection" id="newbornMedical"> 
-        <br>     
+      <div class="certsection" id="newbornMedical">  
         <div class="hdr">NEWBORN MEDICAL</div><br>
 
         <label>Infant Transferred</label>
         <input type="checkbox" name="chkChildTransferred" value="X"   />&nbsp;&nbsp; 
 
         <label>Name of Facility Transferred To</label>
-        <input type="text" name="txtChildTransferredFacility"  value="" size="40"  style="background-color: #ECECFF" maxlength="60"/> 
+        <input type="text" name="txtChildTransferredFacility"  value="" size="40" " maxlength="60"/> 
 
         <label>Facility Code</label>
         <input type="text" name="txtChildTransferredFacilityCode" value="" size="3"  style="width:33; height:26" maxlength="3"/>
 
         <label> State Infant Transferred To</label>
-        <input type="text" name="txtChildTransferredState"  value="" size="25"  style="background-color: #EDF8EB" maxlength="25"/>  
+        <input type="text" name="txtChildTransferredState"  value="" size="25"   maxlength="25"/>  
         <br><br>  
 
         <label>Infant Deceased</label> 
@@ -104,7 +106,7 @@
         <input type="text" name="txtDeathCCYY"  value="" size="4"  style="width: 45" maxlength="4"/>
 
         <label>Death State&nbsp;</label>  
-        <input type="text" name="txtDeathState"  value="" size="25"  style="background-color: #EDF8EB" maxlength="25"/>
+        <input type="text" name="txtDeathState"  value="" size="25" maxlength="25"/>
 
         <label>*State File Number of Death Certificate</label>
         <input type="text" name="txtDeathSFN"  value="" size="20"  maxlength="15"/>
@@ -129,10 +131,109 @@
         <br><br>  
 
         <label>Medical Notes</label>
-        <input type="text" name="txtMedicalNotes"  value="" size="60"  maxlength="60"/>      
+        <input type="text" name="txtMedicalNotes"  value="" size="60"  maxlength="60"/> 
+        <hr class="formHr">       
       </div>
 
       <!-- <ul id="med_list"></ul> -->
+      <div class="certsection" id="mother_confidential">  
+        <div class="hdr">MOTHER INFORMATION</div><br>
+        <label>Mom Marital Status at Time of this Birth:</label>
+        Married to Father of Newborn
+        <input type="checkbox" name="chkMomMaritalStatusM" value="X" /> &nbsp;&nbsp;  
+        Not Married
+        <input type="checkbox" name="chkMomMaritalStatusN" value="X"   /> &nbsp; &nbsp; 
+        Married, but not to Father of Newborn
+        <input type="checkbox" name="chkMomMaritalStatusO" value="X"  /> <br>
+
+      
+        <br><label>Was Mom Ever Married:</label>
+         Yes
+        <input type="checkbox" name="chkMomMarriedEverY" value="X"   />&nbsp;&nbsp;
+        No
+        <input type="checkbox" name="chkMomMarriedEverN" value="X"   /> &nbsp;&nbsp;
+        Unknown
+        <input type="checkbox" name="chkMomMarriedEverU" value="X"   />&nbsp;&nbsp;
+
+        <label>Was Mom Married at Conception, at Birth, or Any Time in Between</label>
+
+        Yes 
+        <input type="checkbox" name="chkMomMarriedBirthY" value="X"   />&nbsp;&nbsp;
+        No
+        <input type="checkbox" name="chkMomMarriedBirthN" value="X"   />  &nbsp;&nbsp;
+        Unknown
+        <input type="checkbox" name="chkMomMarriedBirthU" value="X"  /> <br/>
+
+        <br>
+        <label>(Mother Current Legal Name)</label>
+        <label>&nbsp;First Name:</label>
+        <input type="text" name="txtMomFirst"  value="" size="30"  maxlength="20"/>
+        <label>Middle Name:</label>
+        <input type="text" name="txtMomMiddle"  value="" size="30"  maxlength="30"/><br><br>
+        <label>Last Name</label>
+        <input type="text" name="txtMomLast"  value="" size="30"  maxlength="25"/>&nbsp; 
+        <label>Suffix</label>
+        <input type="text" name="txtMomSuffix"  value="" size="5"/>&nbsp; &nbsp; 
+
+
+        <!-- <br>(Mother Name Prior to First Marriage - Maiden Name: Type &quot;Same&quot; if Mom Maiden Name and Current Name are the Same)
+        <label>First Name:</label> 
+        <input type="text" name="txtMomFirstPrior"  value="" size="50"  maxlength="20"/> 
+        <label>Middle Name</label>
+        <input type="text" name="txtMomMiddlePrior"  value="" size="50"  maxlength="30"/> 
+        <label>*Last Name</label> 
+        <input type="text" name="txtMomLastPrior"  value="" size="50"  maxlength="25"/>&nbsp; 
+        Suffix 
+        <input type="text" name="txtMomSuffixPrior"  value="" size="5"maxlength="4"/>
+ -->
+        <label>*Mother Date of Birth (YYYY-MM-DD)</label>
+        <input type="text" name="txtMomBirth"  value="" size="15"  style="width: 30"/> 
+        <hr class="formHr">                    
+      </div>  
+
+      <div class="certsection" id="mother_confidential">  
+        <div class="hdr">MOTHER CONFIDENTIAL</div><br>
+
+        <label>*Mother Medicaid Number</label>
+        <input type="text" name="txtMomMedicaidNumber" value=""  size="20"  maxlength="10"/>&nbsp;&nbsp;&nbsp;
+
+        <label>Did Mother Receive WIC Food for Herself During Pregnancy: </label>
+        <input type="checkbox" name="chkMomWICY" value="X"   /> Yes&nbsp;&nbsp;
+        <input type="checkbox" name="chkMomWICN" value="X"   /> No&nbsp;&nbsp;
+        <input type="checkbox" name="chkMomWICU" value="X"  /> Unknown
+        <br/><br>  
+
+        <label>Primary Source of Payment for This Delivery: </label>&nbsp;&nbsp;&nbsp;&nbsp;
+
+        Medicaid
+        <input type="checkbox" name="chkSourceOfPayment1" value="X"   /> &nbsp;&nbsp;  
+        Private Insurance
+        <input type="checkbox" name="chkSourceOfPayment2" value="X"   /> &nbsp;&nbsp;
+        Self-Pay
+        <input type="checkbox" name="chkSourceOfPayment3" value="X"   /> &nbsp;&nbsp;    
+        Indian Health Service
+        <input type="checkbox" name="chkSourceOfPayment4" value="X"/> &nbsp;&nbsp;    
+        CHAMPUS/TRICARE 
+        <input type="checkbox" name="chkSourceOfPayment5" value="X"   /> &nbsp;&nbsp;           
+        Other Government (Fed, State, Local)
+        <input type="checkbox" name="chkSourceOfPayment6" value="X"   /> &nbsp;&nbsp;     
+        CHIP
+        <input type="checkbox" name="chkSourceOfPayment7" value="X"   /> &nbsp;&nbsp;    
+        Other
+        <input type="checkbox" name="chkSourceOfPayment8" value="X"   /> &nbsp;&nbsp;         
+        Unknown
+        <input type="checkbox" name="chkSourceOfPayment9" value="X"   /> 
+        <br/> <br>
+
+        <label>Has a Relative of the Baby had a Hearing Loss that Existed 
+        Since Childhood: &nbsp;</label>
+        Yes
+        <input type="checkbox" name="chkHereditaryHearingLossY" value="X"   />&nbsp;&nbsp; 
+        No 
+        <input type="checkbox" name="chkHereditaryHearingLossN" value="X"   />  &nbsp;&nbsp;      
+        Unknown  
+        <input type="checkbox" name="chkHereditaryHearingLossU" value="X"   />                    
+     </div>  
 
 
       <div>
