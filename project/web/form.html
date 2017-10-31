@@ -97,8 +97,8 @@
         <br><br>  
 
         <label>Infant Deceased</label> 
-        <input type="checkbox" name="chkDeceasedY" value="X"   /> Yes&nbsp;&nbsp;
-        <input type="checkbox" name="chkDeceasedN" value="X"   /> No&nbsp; 
+        <input type="radio" name="chkDeceased" value="Yes"   /> Yes&nbsp;&nbsp;
+        <input type="radio" name="chkDeceased" value="No"   /> No&nbsp; 
 
         <label>Date of Death</label>
         <input type="text" name="txtDeathMM"  value="" size="2"  style="width: 30" maxlength="2"/>
@@ -127,7 +127,7 @@
         <input type="text" name="txtNewbornScreeningNumber"  value="" size="15"  maxlength="15"/>&nbsp;&nbsp; 
 
         <label>Newborn Screening Refused </label>
-        <input type="checkbox" name="chkNewbornScreeningRefused" value="X"   /> 
+        <input type="checkbox" name="chkNewbornScreeningRefused" value="Refused Newborn Screening"   /> 
         <br><br>  
 
         <label>Medical Notes</label>
@@ -140,29 +140,29 @@
         <div class="hdr">MOTHER INFORMATION</div><br>
         <label>Mom Marital Status at Time of this Birth:</label>
         Married to Father of Newborn
-        <input type="checkbox" name="chkMomMaritalStatusM" value="X" /> &nbsp;&nbsp;  
+        <input type="radio" name="chkMomMaritalStatus"  value="Married to Father of Newborn" /> &nbsp;&nbsp;  
         Not Married
-        <input type="checkbox" name="chkMomMaritalStatusN" value="X"   /> &nbsp; &nbsp; 
+        <input type="radio" name="chkMomMaritalStatus"  value="Not Married" /> &nbsp; &nbsp; 
         Married, but not to Father of Newborn
-        <input type="checkbox" name="chkMomMaritalStatusO" value="X"  /> <br>
+        <input type="radio" name="chkMomMaritalStatus"  value="Married, but not to Father of Newborn" /> <br>
 
       
         <br><label>Was Mom Ever Married:</label>
          Yes
-        <input type="checkbox" name="chkMomMarriedEverY" value="X"   />&nbsp;&nbsp;
+        <input type="radio" name="MomMarriedEver"  value="Yes" />&nbsp;&nbsp;
         No
-        <input type="checkbox" name="chkMomMarriedEverN" value="X"   /> &nbsp;&nbsp;
+        <input type="radio" name="MomMarriedEver"  value="No" /> &nbsp;&nbsp;
         Unknown
-        <input type="checkbox" name="chkMomMarriedEverU" value="X"   />&nbsp;&nbsp;
+        <input type="radio" name="MomMarriedEver"  value="Unknown" />&nbsp;&nbsp;
 
-        <label>Was Mom Married at Conception, at Birth, or Any Time in Between</label>
+        <label>Was Mom Married at Conception, at Birth, or Any Time in Between: </label>
 
         Yes 
-        <input type="checkbox" name="chkMomMarriedBirthY" value="X"   />&nbsp;&nbsp;
+        <input type="radio" name="chkMomMarriedBirth"  value="Yes" />&nbsp;&nbsp;
         No
-        <input type="checkbox" name="chkMomMarriedBirthN" value="X"   />  &nbsp;&nbsp;
+        <input type="radio" name="chkMomMarriedBirth"  value="No" />  &nbsp;&nbsp;
         Unknown
-        <input type="checkbox" name="chkMomMarriedBirthU" value="X"  /> <br/>
+        <input type="radio" name="chkMomMarriedBirth"  value="Unknown" /> <br/>
 
         <br>
         <label>(Mother Current Legal Name)</label>
@@ -198,9 +198,9 @@
         <input type="text" name="txtMomMedicaidNumber" value=""  size="20"  maxlength="10"/>&nbsp;&nbsp;&nbsp;
 
         <label>Did Mother Receive WIC Food for Herself During Pregnancy: </label>
-        <input type="checkbox" name="chkMomWICY" value="X"   /> Yes&nbsp;&nbsp;
-        <input type="checkbox" name="chkMomWICN" value="X"   /> No&nbsp;&nbsp;
-        <input type="checkbox" name="chkMomWICU" value="X"  /> Unknown
+        <input type="radio" name="chkMomWIC" value="Yes" /> Yes&nbsp;&nbsp;
+        <input type="radio" name="chkMomWIC" value="No" /> No&nbsp;&nbsp;
+        <input type="radio" name="chkMomWIC"  value="Unknown" /> Unknown
         <br/><br>  
 
         <label>Primary Source of Payment for This Delivery: </label>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -228,11 +228,11 @@
         <label>Has a Relative of the Baby had a Hearing Loss that Existed 
         Since Childhood: &nbsp;</label>
         Yes
-        <input type="checkbox" name="chkHereditaryHearingLossY" value="X"   />&nbsp;&nbsp; 
+        <input type="radio" name="chkHereditaryHearingLoss" value="Yes"   />&nbsp;&nbsp; 
         No 
-        <input type="checkbox" name="chkHereditaryHearingLossN" value="X"   />  &nbsp;&nbsp;      
+        <input type="radio" name="chkHereditaryHearingLoss" value="No"   />  &nbsp;&nbsp;      
         Unknown  
-        <input type="checkbox" name="chkHereditaryHearingLossU" value="X"   />                    
+        <input type="radio" name="chkHereditaryHearingLoss" value="Unknown"   />                    
      </div>  
 
 
