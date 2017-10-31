@@ -7,6 +7,11 @@
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
 	<link rel="stylesheet" type="text/css" href="app.css">
+  <script src='http://code.jquery.com/jquery-2.1.4.min.js'></script>
+    <!-- <script src='../dist/fhir-client.js'></script> -->
+  <script src="fhir-client.js"></script>
+  <script type="text/javascript" src="populateForm.js"></script>
+
 </head>
 <body>
 
@@ -36,90 +41,102 @@
  </nav>
 
  <div class="form"  >
-     <form  id="frmDataEntry" method="post" action="#"> 
-      <div>
-        <div> 
-          This is just a demo. Content are subject to changes      
-        </div>      
-
-     <div class="certsection" id="newborn_information">
-
-      <div class="hdr">NEWBORN INFORMATION</div>      
-
-          
-
-      <label>State File Number</label> 
-
+  <form  id="frmDataEntry" method="post" action="#"> 
+    <div>
+      <div> 
+        <h2>Birth Registration Form</h2><br>
+      </div>      
       
+      <div class="certsection" id="newborn_information">
+        <div class="hdr">NEWBORN INFORMATION</div><br>      
+        <label>State File Number:</label> 
+        <input type="text" name="txtStateFileNumber"  size="15"  maxlength="12"/>&nbsp;&nbsp;&nbsp;
 
-      <input type="text" name="txtStateFileNumber"  size="15"  maxlength="12"/><br/>
+        <label>Newborn Medical Record Number:</label>
+        <input type="text" name="txtChildMRN"   id="ChildMRN"  maxlength="25"/>&nbsp;&nbsp;&nbsp;
 
-          
+        <label>Alternate Medical Record Number:</label>  
+        <input type="text" name="txtChildAlternateMRN"  size="25"  maxlength="25"/><br><br>    
 
-      <label>Newborn Medical Record Number:</label>
+        <label>Child First Name:</label>
+        <!-- <input type="text" name="txtChildFirst"  id="childFirst" size="50"/><br/> -->
+        <input id="childFirst"/>&nbsp;&nbsp;&nbsp;
 
-    
+        <!--   <label>Child Middle Name</label>   
+        <input type="text" name="txtChildMiddle"   size="50"  maxlength="30"/><br/>     --> 
 
-      <input type="text" name="txtChildMRN"   size="25"  maxlength="25"/><br/>    
+        <label>Child Last Name:</label>
+        <input id="childLast"/>&nbsp;&nbsp;&nbsp;
 
-      <label>Alternate Medical Record Number:</label>  
+        <label>Child Suffix:</label>
+        <input type="text" name="txtChildSuffix" value="" /> <br><br>
+        <label>Date of Birth (yyyy-mm-dd):</label>
+        <input id="childBirth"/>&nbsp;&nbsp;&nbsp;          
 
-      <input type="text" name="txtChildAlternateMRN"  size="25"  maxlength="25"/><br/>         
-
-      <label>Child First Name:</label>
-
-      <input type="text" name="txtChildFirst"  size="50"/><br/>
-
-      <label>Child Middle Name</label>   
-
-      <input type="text" name="txtChildMiddle"   size="50"  maxlength="30"/><br/>     
-
-      <label>Child Last Name</label>
-
-      <input type="text" name="txtChildLast" size="50"  maxlength="25"/><br/>     
-
-      <label>Child Suffix:</label>
-
-      <input type="text" name="txtChildSuffix" value="" /> <br/>               
-
-      <label>Child Sex:</label>
-
-      
-
-      <input type="checkbox" name="chkGenderM" value="X" /> Male
-
-      <input type="checkbox" name="chkGenderF" value="X" /> Female
-
-      <input type="checkbox" name="chkGenderN" value="X"  /> Not Yet 
-      Determined
-
-      <br/>
-
-      <label>Date of Birth</label>      
-
-      
-
-      <input type="text" name="txtBirthMM" value="" size="2"  maxlength="2" style="width: 30"/> 
-
-      <input type="text" name="txtBirthDD" value="" size="2"  maxlength="2" style="width: 30"/> 
-
-      <input type="text" name="txtBirthCCYY" value="" size="4"  style="width: 45" maxlength="4"/>
-
-    <br/>
-      
-
-      <label>*Time of Birth</label>  
-
-      <input type="text" name="txtTimeOfBirthHH"  value="" size="2"  maxlength="2" style="width: 30"/> 
-
-      <input type="text" name="txtTimeOfBirthMM"  value="" size="2"  maxlength="2" style="width: 30"/>
-
-        
-
-</div>  
+        <label>Child Sex:</label>
+        <input id="childGender"/><br/>   
       </div>
 
+      <div class="certsection" id="newbornMedical"> 
+        <br>     
+        <div class="hdr">NEWBORN MEDICAL</div><br>
+
+        <label>Infant Transferred</label>
+        <input type="checkbox" name="chkChildTransferred" value="X"   />&nbsp;&nbsp; 
+
+        <label>Name of Facility Transferred To</label>
+        <input type="text" name="txtChildTransferredFacility"  value="" size="40"  style="background-color: #ECECFF" maxlength="60"/> 
+
+        <label>Facility Code</label>
+        <input type="text" name="txtChildTransferredFacilityCode" value="" size="3"  style="width:33; height:26" maxlength="3"/>
+
+        <label> State Infant Transferred To</label>
+        <input type="text" name="txtChildTransferredState"  value="" size="25"  style="background-color: #EDF8EB" maxlength="25"/>  
+        <br><br>  
+
+        <label>Infant Deceased</label> 
+        <input type="checkbox" name="chkDeceasedY" value="X"   /> Yes&nbsp;&nbsp;
+        <input type="checkbox" name="chkDeceasedN" value="X"   /> No&nbsp; 
+
+        <label>Date of Death</label>
+        <input type="text" name="txtDeathMM"  value="" size="2"  style="width: 30" maxlength="2"/>
+        <input type="text" name="txtDeathDD"  value="" size="2"  style="width: 30" maxlength="2"/>
+        <input type="text" name="txtDeathCCYY"  value="" size="4"  style="width: 45" maxlength="4"/>
+
+        <label>Death State&nbsp;</label>  
+        <input type="text" name="txtDeathState"  value="" size="25"  style="background-color: #EDF8EB" maxlength="25"/>
+
+        <label>*State File Number of Death Certificate</label>
+        <input type="text" name="txtDeathSFN"  value="" size="20"  maxlength="15"/>
+        <br><br>
+         
+        <label> Hepatitis Vaccination&nbsp;</label>
+        <input type="checkbox" name="chkHepVac" id="chkHepVac" value="X"   />&nbsp;&nbsp;
+        <label>*Date Given</label>
+        <input name="txtHepDate" id="HepDate" style="width: 45" />&nbsp;&nbsp;
+        <!-- <input type="text" name="txtHepMM"  value="" size="2"  style="width: 30" maxlength="2"/>
+        <input type="text" name="txtHepDD"  value="" size="2"  style="width: 30" maxlength="2"/>
+        <input type="text" name="txtHepCCYY"  value="" size="4"  style="width: 45" maxlength="4"/>&nbsp;&nbsp; -->
+
+        <label>Hepatitis Refused</label>
+        <input type="checkbox" name="chkHepRefused" id="chkHepRefused" value="X" />&nbsp;&nbsp; 
+
+        <label>Newborn Screening Number&nbsp; </label>
+        <input type="text" name="txtNewbornScreeningNumber"  value="" size="15"  maxlength="15"/>&nbsp;&nbsp; 
+
+        <label>Newborn Screening Refused </label>
+        <input type="checkbox" name="chkNewbornScreeningRefused" value="X"   /> 
+        <br><br>  
+
+        <label>Medical Notes</label>
+        <input type="text" name="txtMedicalNotes"  value="" size="60"  maxlength="60"/>      
+      </div>
+
+      <!-- <ul id="med_list"></ul> -->
+
+
       <div>
+        <br><br>
         <input type="submit" name="submit"  value="confirm and submit!" onclick="javascript:window.location.href='submit.html'; return false;">
       </div>
        
