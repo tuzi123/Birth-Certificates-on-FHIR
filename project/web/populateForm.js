@@ -44,10 +44,10 @@ function getVaccineCode (vacCodings) {
 var hepAData;
 var hepRefused=true;
 smart.patient.api.search({count:100, type: "Immunization", query: {patient: demo.patientId},
-        }).then(function(r){
-            document.getElementById("chkHepRefused").checked = true;
+        }).then(function(r){      
             for (re of r.data.entry) {
               var rx = re.resource; 
+              document.getElementById("chkHepRefused").checked = true;
               if(getVaccineCode(rx.vaccineCode.coding)=="83"){
                 document.getElementById("chkHepVac").checked = true;
                 hepAData = rx.date;
