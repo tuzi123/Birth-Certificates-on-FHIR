@@ -33,6 +33,10 @@ hr {
     border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
+.formHr{
+    width:1200px;
+}
+
 .content{
     background: rgba(255, 255, 255, 0.54);
     /*background: white;*/
