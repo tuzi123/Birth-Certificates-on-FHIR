@@ -45,8 +45,9 @@ hr {
     margin-left:10%;
     margin-right: 10%
 }
-img{
-    width:50%;
+.about{
+    width:80%;
+    margin: auto;
 }
 
 .login,.search{
