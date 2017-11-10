@@ -41,21 +41,18 @@ function getVaccineCode (vacCodings) {
         }
 
 
-var hepAData;
-var hepRefused=true;
-smart.patient.api.search({count:100, type: "Immunization", query: {patient: demo.patientId},
-        }).then(function(r){      
-            for (re of r.data.entry) {
+smart.patient.api.search({count:10, type: "Immunization", query: {patient: demo.patientId},
+        }).then(function(r){
+              for (re of r.data.entry) {
               var rx = re.resource; 
-              document.getElementById("chkHepRefused").checked = true;
-              if(getVaccineCode(rx.vaccineCode.coding)=="83"){
+              if (rx.vaccineCode.text=="Hepatitis-A" && rx.status=="completed") {
                 document.getElementById("chkHepVac").checked = true;
                 hepAData = rx.date;
                 var hepADataFill = document.getElementById("HepDate");
-                hepADataFill.value = hepAData.substring(0,10);
-                hepRefused=false;
-                document.getElementById("chkHepRefused").checked = false;
-                break;}
+                hepADataFill.value = hepAData;
+                }
+              if (rx.vaccineCode.text=="Hepatitis-A" && rx.status=="refused") {
+                document.getElementById("chkHepRefused").checked = true;}
             };
         });
 
