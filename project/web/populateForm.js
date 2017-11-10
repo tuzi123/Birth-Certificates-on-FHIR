@@ -7,7 +7,7 @@ return vars;
 }
 
 var demo = {
-        serviceUrl: "https://sb-fhir-dstu2.smarthealthit.org/api/smartdstu2/open",
+        serviceUrl: "http://192.168.99.100:8080/hapi-fhir-jpaserver-example/baseDstu2",
         // patientId: "099e7de7-c952-40e2-9b4e-0face78c9d80",
         patientId: getUrlVars()["BabyID"],
         auth: {
