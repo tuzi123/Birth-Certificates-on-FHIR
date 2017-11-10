@@ -33,7 +33,7 @@
 <!--         <li><a href="#contact">Contact</a></li> -->
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <!-- <li><a href="register.html">Register  <i class="fa fa-user-plus"></i></a></li>
+        <!-- <li><a class="active" href="register.html">Register  <i class="fa fa-user-plus"></i></a></li>
         <li><a href="login.html">Login  <i class="fa fa-user"></i></a></li> -->
         <li><a href="index.html">Logout<i class="fa fa-user"></i></a></li>
       </ul>
@@ -52,14 +52,14 @@
       
       <div class="certsection" id="newborn_information">
         <div class="hdr">NEWBORN INFORMATION</div><br>      
-        <label>State File Number:</label> 
+        <!-- <label>State File Number:</label> 
         <input type="text" name="txtStateFileNumber"  size="15"  maxlength="12"/>&nbsp;&nbsp;&nbsp;
 
         <label>Newborn Medical Record Number:</label>
         <input type="text" name="txtChildMRN"   id="ChildMRN"  maxlength="25"/>&nbsp;&nbsp;&nbsp;
 
         <label>Alternate Medical Record Number:</label>  
-        <input type="text" name="txtChildAlternateMRN"  size="25"  maxlength="25"/><br><br>    
+        <input type="text" name="txtChildAlternateMRN"  size="25"  maxlength="25"/><br><br>   -->  
 
         <label>Child First Name:</label>
         <!-- <input type="text" name="txtChildFirst"  id="childFirst" size="50"/><br/> -->
@@ -71,13 +71,25 @@
         <label>Child Last Name:</label>
         <input id="childLast"/>&nbsp;&nbsp;&nbsp;
 
-        <label>Child Suffix:</label>
-        <input type="text" name="txtChildSuffix" value="" /> <br><br>
+        <!-- <label>Child Suffix:</label>
+        <input type="text" name="txtChildSuffix" value="" /> <br><br> -->
         <label>Date of Birth (yyyy-mm-dd):</label>
-        <input id="childBirth"/>&nbsp;&nbsp;&nbsp;          
-
+        <input id="childBirth"/> &nbsp;&nbsp;&nbsp;
         <label>Child Sex:</label>
-        <input id="childGender"/><br/> 
+        <input id="childGender"/><br/> <br>
+
+        <label>Home address:</label>
+        <input type="text" id="homeAddress" value="" />&nbsp;&nbsp;&nbsp; 
+        <label>City:</label>
+        <input id="childCity"/>&nbsp;&nbsp;&nbsp;   
+        <label>State:</label>
+        <input id="childState"/> <br><br>
+        <label>Postal Code:</label>
+        <input id="childPostCode"/>&nbsp;&nbsp;&nbsp;
+        <label>Country:</label>
+        <input id="childCountry"/>&nbsp;&nbsp;&nbsp;
+
+        
         <hr class="formHr">  
       </div>
 
