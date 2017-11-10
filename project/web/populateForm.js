@@ -31,6 +31,28 @@ pq.then(function(p) {
         var birth = p.birthDate;
         var birthFill = document.getElementById("childBirth");
         birthFill.value = birth;
+        
+        if(p.address[0].use=="home"){
+            var babyAddress = p.address[0].line;
+            var addressFill = document.getElementById("homeAddress");
+            addressFill.value = babyAddress;
+
+            var babyCity = p.address[0].city;
+            var cityFill = document.getElementById("childCity");
+            cityFill.value = babyCity;
+
+            var babyPC = p.address[0].postalCode;
+            var postalCodeFill = document.getElementById("childPostCode");
+            postalCodeFill.value = babyPC;
+
+            var babyCountry = p.address[0].country;
+            var countryFill = document.getElementById("childCountry");
+            countryFill.value = babyCountry;
+
+            var babyState = p.address[0].state;
+            var stateFill = document.getElementById("childState");
+            stateFill.value = babyState;
+        }
       });
 
 function getVaccineCode (vacCodings) {
