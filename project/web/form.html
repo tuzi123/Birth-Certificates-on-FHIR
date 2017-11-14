@@ -148,6 +148,47 @@
         <hr class="formHr">       
       </div>
 
+      <div class="certsection" id="abnormal">           
+
+      <div class="hdr">ABNORMAL CONDITIONS OF NEWBORN</div><br/>
+            <label>PLEASE CHECK ALL THAT APPLY:</label>   
+            <input type="checkbox" id="chkNoAbnormalConditions" />&nbsp;&nbsp; 
+            None   
+           <!--  <input type="checkbox" id="chkUnknownAbnormalConditions" />&nbsp;&nbsp; 
+            Unknown -->
+            <br/>
+            <input type="checkbox" id="chkAnemia" /> &nbsp; Anemia&nbsp;
+            <br/>                   
+            <input type="checkbox" id="chkAssistedVent30Mins"  /> &nbsp; 
+            Assisted Ventilation Required Immediately Following Delivery (first 30 minutes)&nbsp;  <br/>
+            <input type="checkbox" id="chkAssistedVent6Hours"   /> &nbsp; 
+            Assisted Ventilation Required for More Than Six Hours&nbsp;
+            <br/>       
+            <!-- <input type="checkbox" id="chkMeningitis"   /> &nbsp; 
+            Meningitis&nbsp;<br/>   
+            <input type="checkbox" id="chkNICUS" /> &nbsp; NICU 
+            Admission 24 Hours or Less&nbsp;
+            <br/>
+            <input type="checkbox" id="chkNICUL" /> &nbsp; 
+            NICU Admission Greater than 24 Hours&nbsp;
+            <br/>
+            <input type="checkbox" id="chkSubstanceAbuse"   /> &nbsp;  
+            Perinatal Substance Abuse&nbsp; <br/> -->
+            <input type="checkbox" id="chkRDS"  /> &nbsp; Respiratory 
+            Distress Syndrome (RDS) / Hyaline Membrane Disease&nbsp;
+            <br/>
+            <input type="checkbox" id="chkSeizure"  /> &nbsp; 
+            Seizure or Serious Neurologic Dysfunction
+            <!-- <br/><input type="checkbox" id="chkInjury" /> &nbsp; Significant 
+            Birth Injury&nbsp;<br/>   
+            <input type="checkbox" id="chkSurfactant" /> &nbsp; 
+            Surfactant Replacement Therapy&nbsp; <br/>
+            <input type="checkbox" id="chkNewbornAntibiotics" /> &nbsp; 
+            Antibiotics for Suspected Neonatal Sepsis&nbsp; -->
+            <hr class="formHr">  
+       </div>
+       
+
       <!-- <ul id="med_list"></ul> -->
       <div class="certsection" id="mother_confidential">  
         <div class="hdr">MOTHER INFORMATION</div><br>
@@ -161,7 +202,7 @@
 
       
         <br><label>Was Mom Ever Married:</label>
-         Yes
+        Yes
         <input type="radio" name="MomMarriedEver"  value="Yes" />&nbsp;&nbsp;
         No
         <input type="radio" name="MomMarriedEver"  value="No" /> &nbsp;&nbsp;
@@ -211,9 +252,9 @@
         <input type="text" name="txtMomMedicaidNumber" value=""  size="20"  maxlength="10"/>&nbsp;&nbsp;&nbsp;
 
         <label>Did Mother Receive WIC Food for Herself During Pregnancy: </label>
-        <input type="radio" name="chkMomWIC" value="Yes" /> Yes&nbsp;&nbsp;
-        <input type="radio" name="chkMomWIC" value="No" /> No&nbsp;&nbsp;
-        <input type="radio" name="chkMomWIC"  value="Unknown" /> Unknown
+        Yes<input type="radio" name="chkMomWIC" value="Yes" /> &nbsp;&nbsp;
+        No<input type="radio" name="chkMomWIC" value="No" /> &nbsp;&nbsp;
+        Unknown<input type="radio" name="chkMomWIC"  value="Unknown" /> 
         <br/><br>  
 
         <label>Primary Source of Payment for This Delivery: </label>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -251,7 +292,7 @@
 
       <div>
         <br><br>
-        <input type="submit" name="submit"  value="confirm and submit!" onclick="javascript:window.location.href='submit.html'; return false;">
+        <input type="submit" name="submit" class="btn btn-default" id="submitForm" value="confirm and submit!" onclick="javascript:window.location.href='submit.html'; return false;">
       </div>
        
      </form>
