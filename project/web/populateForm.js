@@ -7,20 +7,22 @@ return vars;
 }
 
 var demo = {
-        serviceUrl: "http://192.168.99.100:8080/hapi-fhir-jpaserver-example/baseDstu2",
-        // patientId: "099e7de7-c952-40e2-9b4e-0face78c9d80",
+        // serviceUrl: "https://sb-fhir-dstu2.smarthealthit.org/api/smartdstu2/open",
+        // serviceUrl: "http://192.168.99.100:8080/hapi-fhir-jpaserver-example/baseDstu2",
+        serviceUrl: "http://192.168.99.100:8080/baseDstu3",
         patientId: getUrlVars()["BabyID"],
         auth: {
           type: 'none'
         }}
 
 var smart = FHIR.client(demo);
-var pq = smart.patient.read();
+var pq = smart.patient.read(); 
 
 pq.then(function(p) {
         var gender = p.gender;
         var name = p.name[0];
         var firstName = name.given
+        var LastName = name.family
         var firstNameFill = document.getElementById("childFirst");
         firstNameFill.value = firstName;
         var lastNameFill = document.getElementById("childLast");
@@ -31,7 +33,7 @@ pq.then(function(p) {
         var birth = p.birthDate;
         var birthFill = document.getElementById("childBirth");
         birthFill.value = birth;
-        
+
         if(p.address[0].use=="home"){
             var babyAddress = p.address[0].line;
             var addressFill = document.getElementById("homeAddress");
@@ -53,20 +55,12 @@ pq.then(function(p) {
             var stateFill = document.getElementById("childState");
             stateFill.value = babyState;
         }
-      });
-
-function getVaccineCode (vacCodings) {
-            var coding = vacCodings.find(function(c){
-                return c.system == "http://hl7.org/fhir/sid/cvx";
-            });
-            return coding.code 
-        }
 
 
-smart.patient.api.search({count:10, type: "Immunization", query: {patient: demo.patientId},
+        smart.patient.api.search({count:10, type: "Immunization", query: {patient: demo.patientId},
         }).then(function(r){
               for (re of r.data.entry) {
-              var rx = re.resource; 
+                var rx = re.resource; 
               if (rx.vaccineCode.text=="Hepatitis-A" && rx.status=="completed") {
                 document.getElementById("chkHepVac").checked = true;
                 hepAData = rx.date;
@@ -78,4 +72,63 @@ smart.patient.api.search({count:10, type: "Immunization", query: {patient: demo.
             };
         });
 
+// window.onload = function() {
+//     document.getElementById("chkNoAbnormalConditions").checked = true;
+// };
+smart.patient.api.search({count:10, type: "Procedure", query: {patient: demo.patientId},
+        }).then(function(r){
+              for (re of r.data.entry) {
+              document.getElementById("chkNoAbnormalConditions").checked = true;
+              var rx = re.resource; 
+              if (rx.code.coding[0].code=="266700009" && rx.code.coding[0].system=="http://snomed.info/sct" && rx.status=="completed") {
+                if (rx.note[0].text== "Assisted ventilation for > 6 hours"){
+                    document.getElementById("chkAssistedVent6Hours").checked = true;
+                    document.getElementById("chkNoAbnormalConditions").checked = false;
+                }
+                if (rx.note[0].text== "Assisted ventilation immediately following delivery (first 30 minutes)"){
+                    document.getElementById("chkAssistedVent30Mins").checked = true;
+                    document.getElementById("chkNoAbnormalConditions").checked = false;}
+                };
+            };
+        });
+
+smart.patient.api.search({count:20, type: "Observation", query: {patient: demo.patientId},
+        }).then(function(r){
+              for (re of r.data.entry) {
+              var rx = re.resource; 
+              if (rx.code.coding[0].code=="54775-2" && rx.code.coding[0].system=="http://loinc.org") {
+                document.getElementById("chkAnemia").checked = true;
+                document.getElementById("chkNoAbnormalConditions").checked = false;
+                };
+            };
+        });
+
+smart.patient.api.search({count:20, type: "Observation", query: {patient: demo.patientId},
+        }).then(function(r){
+              for (re of r.data.entry) {
+              var rx = re.resource; 
+              if (rx.code.coding[0].code=="46775006" && rx.code.coding[0].system=="http://snomed.info/sct") {
+                document.getElementById("chkRDS").checked = true;
+                document.getElementById("chkNoAbnormalConditions").checked = false;
+                };
+            };
+        });
+
+smart.patient.api.search({count:20, type: "Observation", query: {patient: demo.patientId},
+        }).then(function(r){
+              for (re of r.data.entry) {
+              var rx = re.resource; 
+              if (rx.code.coding[0].code=="91175000" && rx.code.coding[0].system=="http://snomed.info/sct") {
+                document.getElementById("chkSeizure").checked = true;
+                document.getElementById("chkNoAbnormalConditions").checked = false;
+                };
+            };
+        });
+
+
+      }, function (error) {
+    alert("Cannot find the baby with the given ID, please double check!");
+    // document.getElementById("submitForm").disabled = true;
+    location.href = 'search.html';
+});
 
