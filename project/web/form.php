@@ -1,3 +1,10 @@
+<?php 
+session_start();
+if(!isset($_SESSION["username"])){
+	header("Location:login.html");
+}
+else{
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,14 +35,12 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li ><a href="index.html">Home</a></li>
+        <li ><a href="index.php">Home</a></li>
         <li ><a href="about.html">About</a></li>
-<!--         <li><a href="#contact">Contact</a></li> -->
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <!-- <li><a class="active" href="register.html">Register  <i class="fa fa-user-plus"></i></a></li>
-        <li><a href="login.html">Login  <i class="fa fa-user"></i></a></li> -->
-        <li><a href="index.html">Logout<i class="fa fa-user"></i></a></li>
+        <li><a href="">hello, <?=$_SESSION["username"];?></a></li>    
+        <li><a href="logout.php">Logout<i class="fa fa-user"></i></a></li>
       </ul>
     </div>
   </div>
@@ -110,8 +115,8 @@
         <br><br>  
 
         <label>Infant Deceased</label> 
-        <input type="radio" name="chkDeceased" value="Yes"   /> Yes&nbsp;&nbsp;
-        <input type="radio" name="chkDeceased" value="No"   /> No&nbsp; 
+        <input type="radio" name="chkDeceased" id="DeceasedYes" value="Yes"   /> Yes&nbsp;&nbsp;
+        <input type="radio" name="chkDeceased" id="DeceasedNo" value="No"   /> No&nbsp; 
 
         <label>Date of Death</label>
         <input type="text" name="txtDeathMM"  value="" size="2"  style="width: 30" maxlength="2"/>
@@ -292,7 +297,7 @@
 
       <div>
         <br><br>
-        <input type="submit" name="submit" class="btn btn-default" id="submitForm" value="confirm and submit!" onclick="javascript:window.location.href='submit.html'; return false;">
+        <input type="submit" name="submit" class="btn btn-default" id="submitForm" value="confirm and submit!" onclick="javascript:window.location.href='submit.php'; return false;">
       </div>
        
      </form>
@@ -303,3 +308,7 @@
 
 </body>
 </html>
+
+<?php 
+}
+?>
