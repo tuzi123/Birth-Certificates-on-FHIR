@@ -91,7 +91,7 @@ if(isset($_POST["username"]) && !empty($_POST["password"]) && !empty($_POST["ema
 		$sql = "INSERT INTO account(username,password,email) VALUES('$username','$password','$email')";
 		$result = mysqli_query($connect,$sql);
 		if($result)
-		{   header("Location:login.html");
+		{   header("Location:login.php");
 			?>
             <div class="container"> 
             	<div class="row">
