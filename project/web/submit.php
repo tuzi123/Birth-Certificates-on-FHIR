@@ -1,3 +1,10 @@
+<?php 
+session_start();
+if(!isset($_SESSION["username"])){
+  header("Location:login.html");
+}
+else{
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,14 +30,13 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li ><a href="index.html">Home</a></li>
-        <li ><a href="about.html">About</a></li>
+        <li ><a href="index.php">Home</a></li>
+        <li ><a href="about.php">About</a></li>
 <!--         <li><a href="#contact">Contact</a></li> -->
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <!-- <li><a href="register.html">Register  <i class="fa fa-user-plus"></i></a></li>
-        <li><a href="login.html">Login  <i class="fa fa-user"></i></a></li> -->
-        <li><a href="index.html">Logout<i class="fa fa-user"></i></a></li>
+        <li><a href="">hello, <?=$_SESSION["username"];?></a></li>    
+        <li><a href="logout.php">Logout<i class="fa fa-user"></i></a></li>
       </ul>
     </div>
   </div>
@@ -42,7 +48,7 @@
       <div class="title">
         <h1>The baby's form has been successfully delivered!</h1>
         <br><br>
-        <a class="btn btn-primary btn-lg" href="search.html" role="button">Deliver another baby's registration form!</a>
+        <a class="btn btn-primary btn-lg" href="search.php" role="button">Deliver another baby's registration form!</a>
       </div>
     </div>
   </div>
@@ -53,3 +59,7 @@
 
 </body>
 </html>
+
+<?php 
+}
+?>
