@@ -23,13 +23,27 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li class="active"><a href="index.php">Home</a></li>
+        <li><a href="about.php">About</a></li>
 <!--         <li><a href="#contact">Contact</a></li> -->
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="register.html">Register  <i class="fa fa-user-plus"></i></a></li>
-        <li><a href="login.html">Login  <i class="fa fa-user"></i></a></li>
+        <?php 
+          session_start();
+            if(!isset($_SESSION["username"]))
+            {
+              ?>
+             <li><a href="register.php">Register  <i class="fa fa-user-plus"></i></a></li>
+             <li><a href="login.php">Login  <i class="fa fa-user"></i></a></li>
+             <?php
+            }
+            else{
+              ?>
+             <li><a href="">hello, <?=$_SESSION["username"];?></a></li>    
+             <li><a href="logout.php">Logout<i class="fa fa-user"></i></a></li>
+             <?php
+            }
+        ?>
       </ul>
     </div>
   </div>
@@ -42,11 +56,13 @@
  				<h1>iHealth</h1>
  				<h3>Easy Birth Registration App</h3>
  				<hr>
- 				<button class="btn btn-default btn-lg" onclick="window.location.href='search.html'"> Get Started!</button>
+ 				<button class="btn btn-default btn-lg" onclick="javascript:window.location.href='search.php'; return false;"> Get Started!</button>
  			</div>
  		</div>
  	</div>
  </div>
+
+ 
 
  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
