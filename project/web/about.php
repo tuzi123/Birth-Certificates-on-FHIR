@@ -23,13 +23,27 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li ><a href="index.html">Home</a></li>
-        <li class="active"><a href="about.html">About</a></li>
+        <li ><a href="index.php">Home</a></li>
+        <li class="active"><a href="about.php">About</a></li>
 <!--         <li><a href="#contact">Contact</a></li> -->
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="register.html">Register  <i class="fa fa-user-plus"></i></a></li>
-        <li><a href="login.html">Login  <i class="fa fa-user"></i></a></li>
+         <?php 
+          session_start();
+            if(!isset($_SESSION["username"]))
+            {
+              ?>
+             <li><a href="register.php">Register  <i class="fa fa-user-plus"></i></a></li>
+             <li><a href="login.php">Login  <i class="fa fa-user"></i></a></li>
+             <?php
+            }
+            else{
+              ?>
+             <li><a href="">hello, <?=$_SESSION["username"];?></a></li>    
+             <li><a href="logout.php">Logout<i class="fa fa-user"></i></a></li>
+             <?php
+            }
+        ?>
       </ul>
     </div>
   </div>
@@ -44,7 +58,7 @@
         <img class="about" src="img/aboutImage.jpg">
         <br><br>
         <p>The process of manually abstracting information from mother and child records is labor intensive and error prone, and dates back to the time of paper medical records.  Birth clerks also must be trained on the precise definitions of information required to be reported on the birth certificate, and their performance is routinely audited by the state with a focus on maintaining and improving quality.</p>
-        <p>This web applicaion develops the FHIR resource mappings and birth certificate logic to support a SMART-on-FHIR application for birth certificate clerks. A birth certificate clerk in the EHR would launch the birth certificate app. The app would then fetch the necessary data elements, using the EHR’s FHIR port. Other data (e.g. mother’s worksheet) could then be manually entered by the birth certificate clerk directly into the app. The general workflow of this app is shown in the following figure.</p>
+        <p>This web applicaion develops the FHIR resource mappings and birth certificate logic to support a SMART-on-FHIR application for birth certificate clerks. A birth certificate clerk in the EHR would launch the birth certificate app. The app would then fetch the necessary data elements, using the EHR's FHIR port. Other data (e.g. mother's worksheet) could then be manually entered by the birth certificate clerk directly into the app. The general workflow of this app is shown in the following figure.</p>
         <br>
         <img class="about" src="img/workflow.png">
 
