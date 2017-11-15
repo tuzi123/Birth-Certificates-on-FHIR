@@ -23,13 +23,13 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li ><a href="index.html">Home</a></li>
-        <li ><a href="about.html">About</a></li>
+        <li ><a href="index.php">Home</a></li>
+        <li ><a href="about.php">About</a></li>
 <!--         <li><a href="#contact">Contact</a></li> -->
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a class="active" href="register.html">Register  <i class="fa fa-user-plus"></i></a></li>
-        <li><a href="login.html">Login  <i class="fa fa-user"></i></a></li>
+        <li><a href="login.php">Login  <i class="fa fa-user"></i></a></li>
       </ul>
     </div>
   </div>
@@ -44,7 +44,7 @@
           <div class="panel-body">
             <div class="row">
               <div class="col-lg-12">
-                <form id="login-form" action="#" method="post" role="form" style="display: block;">
+                <form id="login-form" action="login.php" method="post" role="form" style="display: block;">
                   <div class="form-group">
                     <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
                   </div>
@@ -54,7 +54,7 @@
                   <div class="form-group">
                     <div class="row">
                       <div class="col-sm-6 col-sm-offset-3">
-                      <a class="btn btn-primary btn-lg" href="index.html" role="button"> Log in </a>
+                        <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
                       </div>
                     </div>
                   </div>
@@ -70,5 +70,42 @@
  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-</body>
+
+<?php 
+
+session_start();
+
+$username = $_POST["username"];
+$password = $_POST["password"];
+
+if ($username&&$password){
+	$connect = mysqli_connect("localhost","root","") or die("Couldn't connect to database!");
+	$db = mysqli_select_db($connect,"registration") or die("Couldn't connect to database!");
+	$query = mysqli_query($connect,"SELECT * FROM account WHERE username='".$username."' and password='".$password."'");
+	$numrows = mysqli_num_rows($query);
+	if ($numrows !==0)
+	{
+		while($row = mysqli_fetch_assoc($query))
+		{
+			$dbusername = $row["username"];
+			$dbpassword = $row["password"];
+		}
+
+		if($username==$dbusername && $password==$dbpassword)
+		{
+			session_start();
+			$_SESSION['username'] = $username;
+			header("Location:search.php");
+		}
+		else
+			echo "Your password is incorrect!";
+	}
+	else die("That user doesn't exists!");
+}
+else 
+	die("Please enter a username and password!");
+ ?>
+
+ </body>
 </html>
+
