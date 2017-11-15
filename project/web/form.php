@@ -36,7 +36,7 @@ else{
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li ><a href="index.php">Home</a></li>
-        <li ><a href="about.html">About</a></li>
+        <li ><a href="about.php">About</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="">hello, <?=$_SESSION["username"];?></a></li>    
