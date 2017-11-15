@@ -28,7 +28,7 @@
 <!--         <li><a href="#contact">Contact</a></li> -->
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a class="active" href="register.html">Register  <i class="fa fa-user-plus"></i></a></li>
+        <li><a class="active" href="register.php">Register<i class="fa fa-user-plus"></i></a></li>
         <li><a href="login.php">Login  <i class="fa fa-user"></i></a></li>
       </ul>
     </div>
@@ -77,6 +77,7 @@
  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 <?php 
+if(isset($_POST['register-submit'])){
 if(isset($_POST["username"]) && !empty($_POST["password"]) && !empty($_POST["email"])){
 	$username = $_POST['username'];
 	$password = $_POST['password'];
@@ -132,6 +133,7 @@ else
 	   <script type="text/javascript">alert("All fields are required");</script>
 	   <?php 
     }
+}
 ?>
 
 </body>
