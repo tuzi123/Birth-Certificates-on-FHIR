@@ -28,7 +28,7 @@
 <!--         <li><a href="#contact">Contact</a></li> -->
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a class="active" href="register.html">Register  <i class="fa fa-user-plus"></i></a></li>
+        <li><a class="active" href="register.php">Register  <i class="fa fa-user-plus"></i></a></li>
         <li><a href="login.php">Login  <i class="fa fa-user"></i></a></li>
       </ul>
     </div>
@@ -44,7 +44,7 @@
           <div class="panel-body">
             <div class="row">
               <div class="col-lg-12">
-                <form id="login-form" action="login.php" method="post" role="form" style="display: block;">
+                <form id="login-form" method="post" role="form" style="display: block;">
                   <div class="form-group">
                     <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
                   </div>
@@ -73,11 +73,9 @@
 
 <?php 
 
-session_start();
-
-$username = $_POST["username"];
-$password = $_POST["password"];
-
+if(isset($_POST['login-submit'])){
+  $username = $_POST["username"];
+  $password = $_POST["password"];
 if ($username&&$password){
 	$connect = mysqli_connect("localhost","root","") or die("Couldn't connect to database!");
 	$db = mysqli_select_db($connect,"registration") or die("Couldn't connect to database!");
@@ -97,13 +95,42 @@ if ($username&&$password){
 			$_SESSION['username'] = $username;
 			header("Location:search.php");
 		}
-		else
-			echo "Your password is incorrect!";
+		else{
+      ?>
+        <div class="container">
+            <div class="row"> 
+              <div class="content">
+                  <h2>Your password is incorrect!</h2>
+                </div>
+            </div>
+         </div>
+      <?php
+    }
 	}
-	else die("That user doesn't exists!");
+	else{
+    ?>
+        <div class="container">
+            <div class="row"> 
+              <div class="content">
+                  <h2>That user doesn't exists!</h2>
+                </div>
+            </div>
+         </div>
+      <?php
+  }
 }
-else 
-	die("Please enter a username and password!");
+else {
+  ?>
+        <div class="container">
+            <div class="row"> 
+              <div class="content">
+                  <h2>Please enter a username and password!</h2>
+                </div>
+            </div>
+         </div>
+      <?php
+}
+}
  ?>
 
  </body>
