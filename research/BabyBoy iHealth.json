@@ -1,0 +1,269 @@
+{
+    "resourceType": "Bundle",
+    "type": "collection",
+    "entry": [
+        {
+            "resource": {
+                "resourceType": "Immunization",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Hepatitis immunization at birth<a name='mm'/></div>"
+                },
+                "id": "cf-1509654087173",
+                "patient": {
+                    "reference": "Patient/cf-1509653935164"
+                },
+                "status": "completed",
+                "vaccineCode": {
+                    "text": "Hepatitis-A"
+                },
+                "primarySource": true,
+                "date": "2017-11-02",
+                "notGiven": true,
+                "meta": {
+                    "tag": [
+                        {
+                            "system": "https://smarthealthit.org/tags",
+                            "code": "baby1"
+                        }
+                    ]
+                }
+            },
+            "outcome": "Ignored",
+            "valid": "saved",
+            "response": {
+                "outcome": {
+                    "resourceType": "OperationOutcome",
+                    "text": {
+                        "status": "generated",
+                        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td><pre>No issues detected during validation</pre></td>\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td style=\"font-weight: bold;\">INFORMATION</td>\n\t\t\t\t<td>[]</td>\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t<td><pre>No issues detected during validation</pre></td>\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t</tr>\n\t\t</table>\n\t</div>"
+                    },
+                    "issue": [
+                        {
+                            "severity": "information",
+                            "code": "informational",
+                            "diagnostics": "No issues detected during validation"
+                        },
+                        {
+                            "severity": "information",
+                            "code": "informational",
+                            "diagnostics": "No issues detected during validation"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns='http://www.w3.org/1999/xhtml'>Observation-anemia<a name='mm'/></div>"
+                },
+                "id": "cf-1509654494468",
+                "subject": {
+                    "reference": "Patient/cf-1509653935164"
+                },
+                "status": "final",
+                "code": {
+                    "coding": [
+                        {
+                            "code": "54775-2",
+                            "system": "http://loinc.org",
+                            "display": "Anemia in last 7 days [MDSv3]"
+                        }
+                    ]
+                },
+                "meta": {
+                    "tag": [
+                        {
+                            "system": "https://smarthealthit.org/tags",
+                            "code": "baby1"
+                        }
+                    ]
+                }
+            },
+            "valid": "saved",
+            "response": {
+                "outcome": {
+                    "resourceType": "OperationOutcome",
+                    "text": {
+                        "status": "generated",
+                        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">WARNING</td><td>[Parameters.parameter.resource]</td><td><pre>All observations should have a performer</pre></td>\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td style=\"font-weight: bold;\">WARNING</td>\n\t\t\t\t<td>[Parameters.parameter.resource]</td>\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t<td><pre>All observations should have an effectiveDateTime or an effectivePeriod</pre></td>\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td style=\"font-weight: bold;\">ERROR</td>\n\t\t\t\t<td>[Parameters.parameter.resource.code.coding]</td>\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t<td><pre>Error org.hibernate.HibernateException: Unable to access lob stream; nested exception is javax.persistence.PersistenceException: org.hibernate.HibernateException: Unable to access lob stream validating Coding</pre></td>\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td style=\"font-weight: bold;\">WARNING</td>\n\t\t\t\t<td>[Parameters.parameter.resource]</td>\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t<td><pre>All observations should have a performer</pre></td>\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td style=\"font-weight: bold;\">WARNING</td>\n\t\t\t\t<td>[Parameters.parameter.resource]</td>\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t<td><pre>All observations should have an effectiveDateTime or an effectivePeriod</pre></td>\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t</tr>\n\t\t</table>\n\t</div>"
+                    },
+                    "issue": [
+                        {
+                            "severity": "warning",
+                            "code": "processing",
+                            "diagnostics": "All observations should have a performer",
+                            "location": [
+                                "Parameters.parameter.resource"
+                            ]
+                        },
+                        {
+                            "severity": "warning",
+                            "code": "processing",
+                            "diagnostics": "All observations should have an effectiveDateTime or an effectivePeriod",
+                            "location": [
+                                "Parameters.parameter.resource"
+                            ]
+                        },
+                        {
+                            "severity": "error",
+                            "code": "processing",
+                            "diagnostics": "Error org.hibernate.HibernateException: Unable to access lob stream; nested exception is javax.persistence.PersistenceException: org.hibernate.HibernateException: Unable to access lob stream validating Coding",
+                            "location": [
+                                "Parameters.parameter.resource.code.coding"
+                            ]
+                        },
+                        {
+                            "severity": "warning",
+                            "code": "processing",
+                            "diagnostics": "All observations should have a performer",
+                            "location": [
+                                "Parameters.parameter.resource"
+                            ]
+                        },
+                        {
+                            "severity": "warning",
+                            "code": "processing",
+                            "diagnostics": "All observations should have an effectiveDateTime or an effectivePeriod",
+                            "location": [
+                                "Parameters.parameter.resource"
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Patient",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns='http://www.w3.org/1999/xhtml'>The patient is the newborn child.<a name='mm'/></div>"
+                },
+                "id": "cf-1509653935164",
+                "name": [
+                    {
+                        "use": "official",
+                        "given": [
+                            "Babytest"
+                        ],
+                        "family": "Ihealth",
+                        "text": "Babytest Ihealth"
+                    }
+                ],
+                "gender": "female",
+                "birthDate": "2017-11-05",
+                "deceased": false,
+                "address": [
+                    {
+                        "use": "home",
+                        "line": [
+                            "4321 North Main Street"
+                        ],
+                        "city": "Orlando",
+                        "state": "FL",
+                        "postalCode": "34567",
+                        "country": "USA"
+                    }
+                ],
+                "meta": {
+                    "tag": [
+                        {
+                            "system": "https://smarthealthit.org/tags",
+                            "code": "baby1"
+                        }
+                    ]
+                }
+            },
+            "valid": "saved",
+            "response": {
+                "outcome": {
+                    "resourceType": "OperationOutcome",
+                    "text": {
+                        "status": "generated",
+                        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td><pre>No issues detected during validation</pre></td>\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td style=\"font-weight: bold;\">INFORMATION</td>\n\t\t\t\t<td>[]</td>\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t<td><pre>No issues detected during validation</pre></td>\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t</tr>\n\t\t</table>\n\t</div>"
+                    },
+                    "issue": [
+                        {
+                            "severity": "information",
+                            "code": "informational",
+                            "diagnostics": "No issues detected during validation"
+                        },
+                        {
+                            "severity": "information",
+                            "code": "informational",
+                            "diagnostics": "No issues detected during validation"
+                        }
+                    ]
+                }
+            },
+            "outcome": "Ignored"
+        },
+        {
+            "resource": {
+                "resourceType": "Procedure",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns='http://www.w3.org/1999/xhtml'><a name='mm'/></div>"
+                },
+                "id": "cf-1509654610077",
+                "subject": {
+                    "reference": "Patient/cf-1509653935164"
+                },
+                "code": {
+                    "coding": [
+                        {
+                            "code": "266700009",
+                            "system": "http://snomed.info/sct",
+                            "display": "Ventilation assistance"
+                        }
+                    ]
+                },
+                "status": "completed",
+                "note": [
+                    {
+                        "text": "Assisted ventilation for > 6 hours",
+                        "time": "2017-11-02T14:31:52-06:00"
+                    }
+                ],
+                "meta": {
+                    "tag": [
+                        {
+                            "system": "https://smarthealthit.org/tags",
+                            "code": "baby1"
+                        }
+                    ]
+                }
+            },
+            "valid": "saved",
+            "response": {
+                "outcome": {
+                    "resourceType": "OperationOutcome",
+                    "text": {
+                        "status": "generated",
+                        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">INFORMATION</td><td>[]</td><td><pre>No issues detected during validation</pre></td>\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td style=\"font-weight: bold;\">ERROR</td>\n\t\t\t\t<td>[Parameters.parameter.resource.code.coding]</td>\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t<td><pre>Error org.hibernate.HibernateException: Unable to access lob stream; nested exception is javax.persistence.PersistenceException: org.hibernate.HibernateException: Unable to access lob stream validating Coding</pre></td>\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t</tr>\n\t\t</table>\n\t</div>"
+                    },
+                    "issue": [
+                        {
+                            "severity": "information",
+                            "code": "informational",
+                            "diagnostics": "No issues detected during validation"
+                        },
+                        {
+                            "severity": "error",
+                            "code": "processing",
+                            "diagnostics": "Error org.hibernate.HibernateException: Unable to access lob stream; nested exception is javax.persistence.PersistenceException: org.hibernate.HibernateException: Unable to access lob stream validating Coding",
+                            "location": [
+                                "Parameters.parameter.resource.code.coding"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "id": "cf-1509653897666"
+}
