@@ -1,3 +1,5 @@
+<?php
+session_start();?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +31,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
          <?php 
-          session_start();
+          // session_start();
             if(!isset($_SESSION["username"]))
             {
               ?>
