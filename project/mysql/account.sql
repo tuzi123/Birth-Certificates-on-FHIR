@@ -6,6 +6,12 @@
 -- Generation Time: Nov 15, 2017 at 05:39 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
+CREATE DATABASE IF NOT EXISTS account
+  DEFAULT CHARACTER SET utf8
+  COLLATE utf8_general_ci;
+
+SET foreign_key_checks = 0;
+USE registration;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
