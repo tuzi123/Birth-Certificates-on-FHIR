@@ -141,3 +141,13 @@ pq.then(function(p) {
     location.href = 'search.php';
 });
 
+      /* Create a medication list */
+// smart.patient.api.search({type: "MedicationOrder", query: {patient: demo.patientId}
+//         }).then(function(r){
+//             r.data.entry.forEach(function(re) {
+//               var rx = re.resource;
+//               var row = $("<li> " + rx.medicationCodeableConcept.text + "</li>");
+//               $("#med_list").append(row);
+//             });
+//         });
+
