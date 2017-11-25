@@ -13,19 +13,59 @@ The collection and submission of birth certificate information to state vital st
 • CPU: 1.2 GHz and higher  
 • RAM: 1.0 GB and larger  
 • Internet access through cellular or WLAN is available when necessary.  
-## Step by Step Setup
+## Instructions to Run Application
+```docker-compose up``` can be run at either root directory or Final Delivery (directory. )
 1. Download the Final Delivery folder
 2. In docker terminal, go to the Final Delivery folder, run ```docker-compose up```
 3. Navigate to *http://192.168.99.100:8088/* to access the index page of the website.
 4. FHIR server web page can be accessed at: *http://192.168.99.100:8080/*
+
+OR:
+1. Download the root folder
+2. In docker terminal, go to the root folder, run ```docker-compose up```
+3. Navigate to *http://192.168.99.100:8088/* to access the index page of the website.
+4. FHIR server web page can be accessed at: *http://192.168.99.100:8080/*
+
+192.168.99.100 is the IP address of the docker container: IP address can be found using:   
+First get the container ID:  ```docker ps```     
+Use the container ID to run:  ```docker inspect <container ID>```      
 ## FHIR Server Introduction
 A new docker image of FHIR server with 2 babies' EHR data is created by modifying Daniel Johnson's original FHIR server.   
 *Baby1:* Name: **BabyTest Ihealth**, ID: **cf-1509653935164**  
 *Baby2:* Name: **BabyBoy Ihealth**, ID: **cf-11509653935164**
-![](https://lh3.googleusercontent.com/-7Kpq6U3ljI0/WhkR7Pwk8EI/AAAAAAAAAK0/Qj0R-Q998GkuPye3uK6CWFKYeFSuKdSzACLcBGAs/s0/manual01.png "manual01.png")
- 
+![](https://lh3.googleusercontent.com/-7Kpq6U3ljI0/WhkR7Pwk8EI/AAAAAAAAAK0/Qj0R-Q998GkuPye3uK6CWFKYeFSuKdSzACLcBGAs/s0/manual01.png "manual01.png")     
+More data can be uploaded using tag-uploader	(Detailed instructions	can be found at	*https://github.com/smart-on-fhir/tag-uploader*)     
 
 ## Web Application User Instruction
+#### Register
+
+1. Go to the website, click the "Get Started!" button
+2. Click "Register" button on the upper right.
+3. Input "Username", "Email Address", "Password" and "Confirm Password" in the blanks for the new register. The new register cannot be duplicated with old ones. 
+4. Click "REGISTER NOW" button to create the new register.
+
+
+
+#### Login
+
+1. Go to the website, click the "Get Started!" button
+2. Select the "Login" button on the upper right.
+3. Input "Username","Password".
+4. Click "LOGIN IN"
+
+#### Logout
+
+1. Click the "Logout" button in the menu.
+
+
+#### Search
+
+1. Login to the website.
+2. Input a valid patient information .
+3. Click the "Search" button.
+4. You would see the details of patient information.
+
+## Demonstration
 1. Go to the website index page (http://192.168.99.100:8088/), click the "Get Started!" button. The user will be navigated to login page if the user is not logged in. If the user already logged in, the search page will show up.
 ![](https://lh3.googleusercontent.com/-wRBPqYDaMMY/WhkSF5yj6qI/AAAAAAAAAK8/rnWkkDdSHrEg-T4dbZTlrHbsvYq5OySCwCLcBGAs/s0/manual02.jpg "manual02.jpg")
  
@@ -48,13 +88,13 @@ There are two choices:
 4. Click “SEARCH”, then the populated form will show up. Only the information that can be found in the EHR database will be populated.
 ![enter image description here](https://lh3.googleusercontent.com/-m0T46ZEWw0w/WhkdldQaSVI/AAAAAAAAANw/msWgbMV_0OQ6usDcM1uijzu4lZCVpGLqACLcBGAs/s0/manual07.png "manual07.png")
  
-5. The user can manually input the information according to mother’s worksheet. After confirming all the information is correct, the user can click “confirm and submit!”  
+5. The user can manually input other information according to mother’s worksheet. After confirming all the information is correct, the user can click “confirm and submit!”  
 ![enter image description here](https://lh3.googleusercontent.com/-28w1DU7QVgE/WhkdgZOltiI/AAAAAAAAANo/N9RfeXTY2l4dghTd27Bdt_It0Iz7Ix-UACLcBGAs/s0/manual08.png "manual08.png")
  
 6. Then form will be delivered to the birth registry. The user will be navigated to search page again if the user clicks on “Deliver another baby’s registration form!”.  
 ![](https://lh3.googleusercontent.com/-cd8peXQXLw0/WhkS6OfuHjI/AAAAAAAAAMA/7vfWz-XVSWQ92ODBmBezh34FcXUiRiLPACLcBGAs/s0/manual09.jpg "manual09.jpg")
  
-&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;*Note: We didn't submit the data to the birth registry server. This may have confidentail problems, we also contacted our mentor Dr.Duncan and he agreed that this part is optional.*
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;*Note: We didn't submit the data to the birth registry server. This may have confidential problems, we also contacted our mentor Dr. Duncan and he agreed that this part is optional.*
 
 7. There’s also a brief introduction about the web application by clicking on “About” in the navigation bar.
 ![](https://lh3.googleusercontent.com/-jn0jjxJPPkk/WhkdWqRabWI/AAAAAAAAANg/6UlJpQw43VkTTftTtox-8pW9iumRYs09wCLcBGAs/s0/manual10.jpg "manual10.jpg")
