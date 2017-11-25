@@ -77,8 +77,9 @@ if(isset($_POST['login-submit'])){
   $username = $_POST["username"];
   $password = $_POST["password"];
 if ($username&&$password){
-	$connect = mysqli_connect("localhost","root","") or die("Couldn't connect to database!");
-	$db = mysqli_select_db($connect,"registration") or die("Couldn't connect to database!");
+	// $connect = mysqli_connect("localhost","root","") or die("Couldn't connect to database!");
+  $connect = mysqli_connect("mysql","root","") or die("Couldn't connect to database!");
+	$db = mysqli_select_db($connect,"registration") or die("Couldn't connect to database!!!");
 	$query = mysqli_query($connect,"SELECT * FROM account WHERE username='".$username."' and password='".$password."'");
 	$numrows = mysqli_num_rows($query);
 	if ($numrows !==0)
