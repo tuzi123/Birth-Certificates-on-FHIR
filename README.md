@@ -5,7 +5,21 @@ Mysql database name: registration
 
 server: stu3
 
-Steps to setup server and access web application:
+
+
+## Steps to launch application using docker
+```docker-compose up``` can be run at either root directory or Final Delivery (directory. )
+1. Download the Final Delivery folder
+2. In docker terminal, go to the Final Delivery folder, run ```docker-compose up```
+3. Navigate to *http://192.168.99.100:8088/* to access the index page of the website.
+4. FHIR server web page can be accessed at: *http://192.168.99.100:8080/*
+
+OR:
+1. Download the root folder
+2. In docker terminal, go to the root folder, run ```docker-compose up```
+3. Navigate to *http://192.168.99.100:8088/* to access the index page of the website.
+4. FHIR server web page can be accessed at: *http://192.168.99.100:8080/*   
+## Steps to setup server and access web application without using docker:
 1. FHIR server:There are two options: 
 
     A. provided by Daniel Johnson (Piazza @494), test baby data can be updated to the server using https://github.com/smart-on-fhir/tag-uploader. 
