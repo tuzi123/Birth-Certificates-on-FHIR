@@ -82,7 +82,7 @@ if(isset($_POST["username"]) && !empty($_POST["password"]) && !empty($_POST["ema
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 	$email = $_POST['email'];
-	$connect = new mysqli('localhost','root',"") or die(myspqli_error());
+	$connect = new mysqli('mysql','root',"") or die(myspqli_error());
 	$db = mysqli_select_db($connect,'registration') or die("DB error");
 	$query = mysqli_query($connect, "SELECT * FROM account WHERE username='".$username."'");
 	$numrows = mysqli_num_rows($query);
