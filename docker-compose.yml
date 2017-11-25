@@ -1,0 +1,33 @@
+version: '3'
+services:
+  mysql:
+    # image: mariadb:latest
+    # image: bigtruedata/php-mysqli
+    image: mysql
+    restart: always
+    ports:
+      - 3306
+    environment:
+      - MYSQL_DATABASE=registration
+      - MYSQL_USER=root
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - ./project/mysql:/docker-entrypoint-initdb.d
+      # - ./my.cnf:/etc/mysql/my.cnf
+  website:
+    # image: php:apache
+    # image: ydoyeul/apache-php-mysqli
+    image: zonciu/php-apache
+    volumes:
+      - ./project/web:/var/www/html
+    ports:
+      - 8088:80  
+    depends_on:
+      - fhir
+      - mysql
+    links:
+      - mysql
+  fhir:
+    image: tuzi123/hapi-fhir-jpaserver:stu3
+    ports:
+      - 8080:8080
