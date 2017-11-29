@@ -7,15 +7,13 @@ return vars;
 }
 
 var demo = {
-        // serviceUrl: "https://sb-fhir-dstu2.smarthealthit.org/api/smartdstu2/open",
-        // serviceUrl: "http://192.168.99.100:8080/hapi-fhir-jpaserver-example/baseDstu2",
+        //Please update the following URL to match the FHIR server
         serviceUrl: "http://192.168.99.100:8080/baseDstu3",
         patientId: getUrlVars()["BabyID"],
         auth: {
           type: 'none'
         }}
 
-// http://localhost:8080/fhir-app/web/index.html
 var smart = FHIR.client(demo);
 var pq = smart.patient.read(); 
 
