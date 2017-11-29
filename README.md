@@ -7,7 +7,7 @@ server: stu3
 
 ## Background
 
-This CDC-Utah Birth Certificates On FHIR program is a web based FHIR interface birth registration application.  Currently birth reporting from Hospital EHRs to state public health departments include a manual component where a clerk abstracts medical information on newborn baby and mother, and keys into a web form.  Because the information is hand-written onto a facility worksheet which caused time-consuming and error-prone.  A way to overcome this challenge is to develop a web-based application-- an electronic birth registration system which can abstract clinical information from the records of both the mother and the newborn and submit to the state health department birth certificate registry in an efficient an accurate way. 
+This CDC-Utah Birth Certificates On FHIR program is a web based FHIR interface birth registration application.  Currently birth reporting from Hospital EHRs to state public health departments include a manual component where a clerk abstracts medical information on newborn baby and mother, and keys into a web form.  Because the information is hand-written onto a facility worksheet which is time-consuming and error-prone.  A way to overcome this challenge is to develop a web-based application-- an electronic birth registration system which can abstract clinical information from the records of both the mother and the newborn and submit to the state health department birth certificate registry in an efficient an accurate way. 
 
 ## Steps to launch application using docker
 ### Important
@@ -28,6 +28,8 @@ The port for web application is 8088. The port for FHIR server is 8080.
 If docker is running in the Virtual Machine ,the IP need to be found and website can be accessed at: *http://IP:8088/*. FHIR server can be accessed at: *http://IP:8080/*.    
 Otherwise, the website can be accessed at: *http://localhost:8088/*. FHIR server can be accessed at: *http://localhost:8080/*.    
 Please choose the correct URLs to access the website and FHIR server. Please replace the URLs in the following instructions according to docker container IP address.       
+The URL in ./project/web/populateForm.js at line 11, it is the only place that the hard coded FHIR IP address is used.    
+
 ### Instructions
 ```docker-compose up``` can be run at either root directory or Final Delivery (directory). 
 1. Download the Final Delivery folder
@@ -37,7 +39,7 @@ Please choose the correct URLs to access the website and FHIR server. Please rep
 > Use the container ID to run to find container IP: ```docker inspect <container ID> ```     
 
 4. FHIR server web page can be accessed at: *http://IP:8080/* The fhir server URL can be found in this page.
-5. Update the FHIR URL in the file at ./project/web/populateForm.js at line 11.     
+5. Update the FHIR URL in the file at ./project/web/populateForm.js at line 11. It is the only place that the hard coded FHIR IP address is used.     
 ```javascript
 9	var demo = 
 10        //Please update the following URL to match the FHIR server
@@ -57,7 +59,7 @@ OR:
 > Use the container ID to run to find container IP: ```docker inspect <container ID> ```     
 
 4. FHIR server web page can be accessed at: *http://IP:8080/* The fhir server URL can be found in this page.
-5. Update the FHIR URL in the file at ./project/web/populateForm.js at line 11.    
+5. Update the FHIR URL in the file at ./project/web/populateForm.js at line 11. It is the only place that the hard coded FHIR IP address is used.    
 ```javascript
 9	var demo = 
 10        //Please update the following URL to match the FHIR server
@@ -67,7 +69,7 @@ OR:
 14          type: 'none'
 15        }}
 ```     
-6. Navigate to *http://IP:8088/* to access the index page of the website.       
+6. Navigate to *http://IP:8088/* to access the index page of the website.              
   
 ## Steps to setup server and access web application without using docker:
 1. FHIR server:There are two options: 

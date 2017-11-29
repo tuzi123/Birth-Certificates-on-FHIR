@@ -11,7 +11,9 @@ The port for web application is 8088. The port for FHIR server is 8080.
 
 If docker is running in the Virtual Machine ,the IP need to be found and website can be accessed at: *http://IP:8088/*. FHIR server can be accessed at: *http://IP:8080/*.    
 Otherwise, the website can be accessed at: *http://localhost:8088/*. FHIR server can be accessed at: *http://localhost:8080/*.    
-Please choose the correct URLs to access the website and FHIR server. Please replace the URLs in the following instructions according to docker container IP address.       
+Please choose the correct URLs to access the website and FHIR server. Please replace the URLs in the following instructions according to docker container IP address.    
+The URL in ./project/web/populateForm.js at line 11, it is the only place that the hard coded FHIR IP address is used.    
+
 ### Instructions
 ```docker-compose up``` can be run at either root directory or Final Delivery (directory). 
 1. Download the Final Delivery folder
@@ -21,7 +23,7 @@ Please choose the correct URLs to access the website and FHIR server. Please rep
 > Use the container ID to run to find container IP: ```docker inspect <container ID> ```     
 
 4. FHIR server web page can be accessed at: *http://IP:8080/* The fhir server URL can be found in this page.
-5. Update the FHIR URL in the file at ./project/web/populateForm.js at line 11.     
+5. Update the FHIR URL in the file at ./project/web/populateForm.js at line 11. It is the only place that the hard coded FHIR IP address is used.     
 ```javascript
 9	var demo = 
 10        //Please update the following URL to match the FHIR server
@@ -41,7 +43,7 @@ OR:
 > Use the container ID to run to find container IP: ```docker inspect <container ID> ```     
 
 4. FHIR server web page can be accessed at: *http://IP:8080/* The fhir server URL can be found in this page.
-5. Update the FHIR URL in the file at ./project/web/populateForm.js at line 11.    
+5. Update the FHIR URL in the file at ./project/web/populateForm.js at line 11. It is the only place that the hard coded FHIR IP address is used.    
 ```javascript
 9	var demo = 
 10        //Please update the following URL to match the FHIR server
