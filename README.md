@@ -5,7 +5,9 @@ Mysql database name: registration
 
 server: stu3
 
+## Background
 
+This CDC-Utah Birth Certificates On FHIR program is a web based FHIR interface birth registration application.  Currently birth reporting from Hospital EHRs to state public health departments include a manual component where a clerk abstracts medical information on newborn baby and mother, and keys into a web form.  Because the information is hand-written onto a facility worksheet which caused time-consuming and error-prone.  A way to overcome this challenge is to develop a web-based application-- an electronic birth registration system which can abstract clinical information from the records of both the mother and the newborn and submit to the state health department birth certificate registry in an efficient an accurate way. 
 
 ## Steps to launch application using docker
 ### Important
