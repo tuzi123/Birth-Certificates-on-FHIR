@@ -22,7 +22,9 @@ Birth-Certificates-on-FHIR – (root directory)
 |   &nbsp;&nbsp;  &nbsp;&nbsp; +--- Final Gant Chart – iHealth.pdf   
 |   &nbsp;&nbsp;  &nbsp;&nbsp; +--- Manual – iHealth.pdf   
 |   &nbsp;&nbsp;  &nbsp;&nbsp; +--- Special Instructions – iHealth.pdf  
-|   &nbsp;&nbsp;  &nbsp;&nbsp; +--- Research – (Directory) 
+|   &nbsp;&nbsp;  &nbsp;&nbsp; +--- Research – (Directory)    
+|   &nbsp;&nbsp;  &nbsp;&nbsp; +--- Deliverable 1 presentation (.pdf) and narration (link on Youtube or mp4 file)    
+|   &nbsp;&nbsp;  &nbsp;&nbsp; +--- Final Project/Deliverable 4 Presentation (.pdf)  and demo/narration (link on Youtube or mp4 file)       
 
 All the project codes are located in the project directory. The two project directories are the same.  Here are the structure and elements introduction of the project directory:   
 |--- project – (directory)     
