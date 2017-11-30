@@ -2,7 +2,10 @@ Special Instructions
 ===================
 
 
-## Instructions to run the app
+## Instructions to run the app      
+The application has been deployed at here:
+https://fhirtesting.hdap.gatech.edu/BirthCertificates/       
+
 ### Important notes
 The port for web application is 8088. The port for FHIR server is 8080.      
 192.168.99.100  (shown in the following instructions) is the IP address of the docker container: IP address can be found using:      

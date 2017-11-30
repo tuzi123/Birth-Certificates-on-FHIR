@@ -24,7 +24,10 @@ In docker compose file, there are three containers:
 1. **mysql** for user authentification; user data is added using volumes    
 2. **fhir** server
 3. **Website** which contains apache-php-mysqli, php.ini is also required; project codes are added using volumes    
-## Instructions to Run Application  
+## Instructions to Run Application     
+The application has deployed at here:
+https://fhirtesting.hdap.gatech.edu/BirthCertificates/       
+ 
 ### Important notes  
 The port for web application is 8088. The port for FHIR server is 8080.      
 192.168.99.100  (shown in the following instructions) is the IP address of the docker container: IP address can be found using:      
